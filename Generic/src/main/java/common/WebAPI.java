@@ -643,5 +643,9 @@ public class WebAPI {
         return text;
     }
 
+    public void getWindowsMaximize() {
+        driver.manage().window().maximize();
+    }
+
 
 }
