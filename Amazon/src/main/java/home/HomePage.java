@@ -27,6 +27,7 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
 
+    @FindBy(how = How.XPATH,using = stickersWebElement ) public WebElement stickers;
 
     // Steps:1: // Enter keyword in search box
     public  void enterKeyWord(String keyword){
@@ -68,6 +69,11 @@ public class HomePage extends WebAPI {
         checkout.click();
     }
 
+    //Step 8: STICKERS
+    public void clickStickers(){
+        //click Stickers
+        stickers.click();
+    }
 
     public void searchProduct() throws InterruptedException {
        // setUp("windows","chrome","https://www.amazon.com/");
@@ -77,7 +83,25 @@ public class HomePage extends WebAPI {
         sleepFor(3);
         cleanUp();
     }
+    public void searchProduct1() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("pink notebook");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        cleanUp();
+    }
 
+    public void searchProduct2() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("stickers");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickStickers();
+        sleepFor(3);
+        cleanUp();
+    }
 public void validateSearchProduct(){
 
 }

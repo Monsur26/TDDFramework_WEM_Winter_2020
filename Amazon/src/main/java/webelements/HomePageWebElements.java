@@ -12,7 +12,7 @@ public class HomePageWebElements {
         public static final String checkoutWebElement="hlb-ptc-btn-native";
         public static final String shopLinksWebElements="#nav-xshop > a";
 
-
+        public static final String stickersWebElement="//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[9]/div/span/div/div/div[2]/h2/a";
 
 
 
