@@ -28,6 +28,8 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
 
 
+    //All the setup methods
+
     // Steps:1: // Enter keyword in search box
     public  void enterKeyWord(String keyword){
         // Enter keyword in search box
