@@ -21,7 +21,8 @@ import org.testng.annotations.Test;
         public void testSearchProduct2() throws InterruptedException {
             getInitElements();
             homePage.searchProduct2();
-            //commentgi
+            //comment
+            //
         }
 
 

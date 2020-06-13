@@ -4,7 +4,7 @@ import common.WebAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-
+//import org.w3c.dom.html.HTMLInputElement;
 import java.util.List;
 
 import static webelements.HomePageWebElements.*;
@@ -28,6 +28,13 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
 
     @FindBy(how = How.XPATH,using = stickersWebElement ) public WebElement stickers;
+    @FindBy(how = How.XPATH,using = sandalsWebElements) public WebElement sandals;
+  @FindBy(how = How.XPATH,using = flowersWebElements) public WebElement flowers;
+  @FindBy(how = How.XPATH,using = penWebElements) public WebElement pen;
+  @FindBy(how = How.XPATH,using = mirrorWebElements) public WebElement mirror;
+  @FindBy(how = How.XPATH,using = pillowWebElements) public WebElement pillow;
+  @FindBy(how = How.XPATH,using = popcornWebElements) public WebElement popcorn;
+  @FindBy(how = How.XPATH,using = headphonesWebElements) public WebElement headphones;
 
     // Steps:1: // Enter keyword in search box
     public  void enterKeyWord(String keyword){
@@ -52,7 +59,7 @@ public class HomePage extends WebAPI {
         qty.click();
     }
 
-    // Steps:5:
+   //  Steps:5:
     public void doSelectQty(){
         // Select Quantity
         selectQty.click();
@@ -75,6 +82,41 @@ public class HomePage extends WebAPI {
         stickers.click();
     }
 
+    //Step 9: SANDALS
+        public void clickSandals(){
+            //click sandals
+            sandals.click();
+        }
+    //Step 9: FLOWERS
+    public void clickFlowers(){
+        //click sandals
+        flowers.click();
+    }
+    //Step 9: PEN
+    public void clickPen(){
+        //click sandals
+        pen.click();
+    }
+    //Step 9: MIRROR
+    public void clickMirror(){
+        //click sandals
+        mirror.click();
+    }
+    //Step 9: PILLOW
+    public void clickPillow(){
+        //click pillow
+        pillow.click();
+    }
+    //Step 9: PILLOW
+    public void clickPopcorn(){
+        //click pillow
+        popcorn.click();
+    }
+    //Step 9: PILLOW
+    public void clickHeadphones(){
+        //click pillow
+        headphones.click();
+    }
     public void searchProduct() throws InterruptedException {
        // setUp("windows","chrome","https://www.amazon.com/");
         enterKeyWord("I Phone 11 pro");
@@ -94,12 +136,101 @@ public class HomePage extends WebAPI {
 
     public void searchProduct2() throws InterruptedException {
         // setUp("windows","chrome","https://www.amazon.com/");
-        enterKeyWord("stickers");
+        enterKeyWord("stickers hello kitty");
         sleepFor(3);
         clickSearchButton();
         sleepFor(3);
         clickStickers();
         sleepFor(3);
+        cleanUp();
+    }
+    public void searchProduct3() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("orange sandals");
+        sleepFor(3);
+        clickSearchButton();
+        clickSandals();
+        clickQty();
+        sleepFor(3);
+        cleanUp();
+    }
+    public void searchProduct4() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("flowers");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickFlowers();
+        sleepFor(3);
+        cleanUp();
+    }
+
+
+
+    public void searchProduct5() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("feather pen");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickPen();
+        sleepFor(3);
+        cleanUp();
+    }
+    public void searchProduct6() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("mirror");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickMirror();
+        sleepFor(3);
+        clickQty();
+        sleepFor(3);
+        cleanUp();
+    }
+    public void searchProduct7() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("rainbow pillow");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickPillow();
+        sleepFor(3);
+        clickQty();
+       doSelectQty();
+        sleepFor(3);
+        cleanUp();
+    }
+    public void searchProduct8() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("popcorn tub");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickPopcorn();
+        cleanUp();
+    }
+    public void searchProduct9() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("pink headphones");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickHeadphones();
+        sleepFor(3);
+        cleanUp();
+    }
+    public void searchProduct10() throws InterruptedException {
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("pink headphones");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickHeadphones();
+        sleepFor(3);
+        clickQty();
+        doSelectQty();
         cleanUp();
     }
 public void validateSearchProduct(){

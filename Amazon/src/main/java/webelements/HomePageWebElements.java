@@ -12,8 +12,15 @@ public class HomePageWebElements {
         public static final String checkoutWebElement="hlb-ptc-btn-native";
         public static final String shopLinksWebElements="#nav-xshop > a";
 
-        public static final String stickersWebElement="//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[9]/div/span/div/div/div[2]/h2/a";
+        public static final String stickersWebElement="//span[contains(text(),'SmileMakers Hello Kitty Glasses Stickers - Prizes')]";;
 
+        public static final String sandalsWebElements="//span[contains(text(),'KCPer Sandals for Women')]";;
+       public static final String flowersWebElements="//span[contains(text(),'NICEAO Gold Rose 24K')]";
+       public static final String penWebElements="//span[contains(text(),'Darice White Feather Pen')]";
+       public static final String mirrorWebElements="//span[contains(text(),'OMIRO Hand Mirror, Black')]";
+       public static final String pillowWebElements="//span[contains(text(),'Rainbow Pom Poms Pillows')]";
+       public static final String popcornWebElements="//span[contains(text(),'Paragon Popcorn Bucket')]";
+       public static final String headphonesWebElements="//span[contains(text(),'OneOdio Over Ear Headphones')]";
 
 
 
