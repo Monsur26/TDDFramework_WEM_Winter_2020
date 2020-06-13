@@ -2,6 +2,7 @@ package home;
 
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -26,6 +27,7 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.XPATH,using = selectQtyWebElement) public WebElement selectQty;
     @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
+    @FindBy(css = accountsMenuWebElements) public WebElement accountsMenu;
 
 
     // Steps:1: // Enter keyword in search box
@@ -68,7 +70,18 @@ public class HomePage extends WebAPI {
         checkout.click();
     }
 
+    //Accounts menu mouseHover
+    public void accountsMenuHover(){
+        Actions ac=new Actions(driver);
+        ac.moveToElement(accountsMenu).perform();
 
+    }
+
+    /**
+     * first test case
+     * searching for a product
+     * @throws InterruptedException
+     */
     public void searchProduct() throws InterruptedException {
        // setUp("windows","chrome","https://www.amazon.com/");
         enterKeyWord("I Phone 11 pro");
@@ -78,6 +91,11 @@ public class HomePage extends WebAPI {
         cleanUp();
     }
 
+    /**
+     * 2nd test case
+     * search product and select product.
+     * @throws InterruptedException
+     */
     public void searchProductSelect() throws InterruptedException {
         enterKeyWord("Hand Sanitizer");
         sleepFor(2);
@@ -139,6 +157,12 @@ public class HomePage extends WebAPI {
 
     public void findingLinksHomePage(){
         System.out.println("Number of links on top menu of HomePage: "+shopLinks.size());
+
+    }
+
+    public void accountsMenuMouseHover() throws InterruptedException {
+        accountsMenuHover();
+        sleepFor(2);
 
     }
 
