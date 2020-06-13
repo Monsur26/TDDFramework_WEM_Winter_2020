@@ -14,7 +14,7 @@ public class HomePageTest5 extends WebAPI {
     }
 
     @Test
-    public void testCheckout() throws InterruptedException {
+    public void testCheckoutItem() throws InterruptedException {
         getInitElements();
         homePage.checkout();
     }

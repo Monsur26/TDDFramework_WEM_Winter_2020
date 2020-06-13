@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -22,12 +24,13 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.CSS,using = searchBoxWebElement) public WebElement searchBox;
     @FindBy(how = How.CSS,using = searchButtonWebElement) public WebElement searchButton;
     //@FindBy(how = How.XPATH,using = artNaturalWebElement) public WebElement artNatural;
-    @FindBy(css =artNaturalWebElement ) public WebElement artNatural;
+    @FindBy(xpath =artNaturalWebElement ) public WebElement artNatural;
     @FindBy(how = How.CSS,using = qtyWebElement) public WebElement qty;
     @FindBy(how = How.XPATH,using = selectQtyWebElement) public WebElement selectQty;
     @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
     @FindBy(css = accountsMenuWebElements) public WebElement accountsMenu;
+    @FindBy(id = dropdownMenuWebElement) public WebElement dropdownMenu;
 
 
     // Steps:1: // Enter keyword in search box
@@ -77,6 +80,15 @@ public class HomePage extends WebAPI {
 
     }
 
+    public void dropdownMenu(int indexNumber){
+        Select s=new Select(dropdownMenu);
+        s.selectByIndex(indexNumber);
+    }
+
+
+
+
+
     /**
      * first test case
      * searching for a product
@@ -91,6 +103,11 @@ public class HomePage extends WebAPI {
         cleanUp();
     }
 
+    public void validateSearchProduct(String expected){
+
+        Assert.assertEquals("I Phone 11 pro",expected," Not Successful Assertion");
+    }
+
     /**
      * 2nd test case
      * search product and select product.
@@ -103,9 +120,17 @@ public class HomePage extends WebAPI {
         sleepFor(2);
         clickProduct();
         cleanUp();
-
-
     }
+
+    public void validateSearchProductSelect(String expected){
+        Assert.assertEquals("Hand Sanitizer",expected,"Not valid assertion");
+    }
+
+    /**
+     * Test Case 3
+     * search product and select quantity
+     * @throws InterruptedException
+     */
     public void searchProductSelectqty() throws InterruptedException {
         enterKeyWord("Hand Sanitizer");
         sleepFor(2);
@@ -118,10 +143,16 @@ public class HomePage extends WebAPI {
         doSelectQty();
         sleepFor(1);
         cleanUp();
-
-
+    }
+    public void validateSearchProductSelectandqty(String expected){
+        Assert.assertEquals("Hand Sanitizer",expected,"Not valid assertion");
     }
 
+
+    /**
+     * Test Case 4
+     * @throws InterruptedException
+     */
     public void addToCart() throws InterruptedException {
         enterKeyWord("Hand Sanitizer");
         sleepFor(2);
@@ -166,9 +197,12 @@ public class HomePage extends WebAPI {
 
     }
 
-    public void validateSearchProduct(){
-
+    public void dropdownMenuItemSelectByIndex(){
+        dropdownMenu(3);
+        clickSearchButton();
     }
+
+
 
 
 

@@ -19,6 +19,7 @@ public class HomePageTest2 extends WebAPI {
     public void testSearchProductSelect() throws InterruptedException {
         getInitElements();
         homePage.searchProductSelect();
+        homePage.validateSearchProductSelect("Hand Sanitizer");
     }
 
 

@@ -14,7 +14,7 @@ public class HomePageTest4 extends WebAPI {
     }
 
     @Test
-    public void testaddToCart() throws InterruptedException {
+    public void testAddToCart() throws InterruptedException {
         getInitElements();
         homePage.addToCart();
     }
