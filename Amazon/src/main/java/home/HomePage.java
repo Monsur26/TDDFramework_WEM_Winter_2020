@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.io.IOException;
 import java.util.List;
 
 import static webelements.HomePageWebElements.*;
@@ -26,6 +27,10 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.XPATH,using = selectQtyWebElement) public WebElement selectQty;
     @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
+
+    //CHIPS
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Pringles Potato Crisps Chips, Flavored 15 Count Va')]")
+    public WebElement leChips;
 
 
     // Steps:1: // Enter keyword in search box
@@ -68,6 +73,11 @@ public class HomePage extends WebAPI {
         checkout.click();
     }
 
+    //CHIPS
+    public void clickPringles(){
+        leChips.click();
+    }
+
 
     public void searchProduct() throws InterruptedException {
        // setUp("windows","chrome","https://www.amazon.com/");
@@ -77,6 +87,19 @@ public class HomePage extends WebAPI {
         sleepFor(3);
         cleanUp();
     }
+
+    public void searchChips() throws InterruptedException, IOException {
+        setUp(true, "", "windows", "", "chrome", "", "https://www.amazon.com");
+        enterKeyWord("chips");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickPringles();
+        sleepFor(3);
+        cleanUp();
+    }
+
+
 
 public void validateSearchProduct(){
 
