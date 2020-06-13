@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report DirectoryC:\Users\maruf\Desktop\Selenium_group_2\TDDFramework_WEM_Winter_2020\TDBank\target\surefire-reports\html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-06-12T12:15:10 EDT" name="TD Bank Automation Script" finished-at="2020-06-12T12:15:33 EDT" duration-ms="23461">
+    <groups>
+    </groups>
+    <test started-at="2020-06-12T12:15:10 EDT" name="HomePage" finished-at="2020-06-12T12:15:33 EDT" duration-ms="23461">
+      <class name="hometest.HomePageTest2">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:09 EDT" name="extentSetup" finished-at="2020-06-12T12:15:10 EDT" duration-ms="376" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4632cfc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report DirectoryC:\Users\maruf\Desktop\Selenium_group_2\TDDFramework_WEM_Winter_2020\TDBank\target\surefire-reports\html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:10 EDT" name="setUp" finished-at="2020-06-12T12:15:22 EDT" duration-ms="12142" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[83]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.td.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:22 EDT" name="startExtent" finished-at="2020-06-12T12:15:22 EDT" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void hometest.HomePageTest2.testProducts() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testProducts()[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:22 EDT" name="testProducts" finished-at="2020-06-12T12:15:32 EDT" duration-ms="9719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProducts -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:32 EDT" name="afterEachTestMethod" finished-at="2020-06-12T12:15:33 EDT" duration-ms="1501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testProducts status=SUCCESS method=HomePageTest2.testProducts()[pri:0, instance:hometest.HomePageTest2@236e3f4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:33 EDT" name="cleanUp" finished-at="2020-06-12T12:15:33 EDT" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:hometest.HomePageTest2@236e3f4e]" started-at="2020-06-12T12:15:33 EDT" name="generateReport" finished-at="2020-06-12T12:15:34 EDT" duration-ms="552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- hometest.HomePageTest2 -->
+    </test> <!-- HomePage -->
+  </suite> <!-- TD Bank Automation Script -->
+</testng-results>

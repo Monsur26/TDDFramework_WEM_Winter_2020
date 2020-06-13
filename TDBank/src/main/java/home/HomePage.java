@@ -17,10 +17,17 @@ public class HomePage extends WebAPI {
     public void MouseHoverOnProductsToServices() throws InterruptedException {
         getWindowsMaximize();
         sleepFor(2);
+//        mouseHoverByCSSLocator("#td-desktop-nav-dropdown-link-2");
+//        sleepFor(5);
+//        mouseHoverByCSSLocator("#td-desktop-nav-dropdown-link-3");
+//        sleepFor(3);
+
+//        mouseHoverByCSS("#td-desktop-nav-dropdown-link-2");
+//        sleepFor(10);
         mouseHoverByCSS("#td-desktop-nav-dropdown-link-2");
         sleepFor(3);
-//        mouseHoverByCSS("#td-desktop-nav-dropdown-link-3");
-//        sleepFor(3);
+        mouseHoverByCSS("#td-desktop-nav-dropdown-link-3");
+        sleepFor(3);
     }
     public void TryToFindLocation() throws InterruptedException {
         getWindowsMaximize();

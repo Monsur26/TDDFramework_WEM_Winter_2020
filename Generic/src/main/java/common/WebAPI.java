@@ -479,6 +479,7 @@ public class WebAPI {
             WebElement element = driver.findElement(By.cssSelector(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
+            hover.build().perform();
         } catch (Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.cssSelector(locator));
@@ -494,6 +495,7 @@ public class WebAPI {
             WebElement element = driver.findElement(By.xpath(locator));
             Actions action = new Actions(driver);
             Actions hover = action.moveToElement(element);
+            hover.build().perform();
         } catch (Exception ex) {
             System.out.println("First attempt has been done, This is second try");
             WebElement element = driver.findElement(By.xpath(locator));
@@ -645,7 +647,31 @@ public class WebAPI {
 
     public void getWindowsMaximize() {
         driver.manage().window().maximize();
+
     }
+    public void getLink(String locator){
+        driver.findElements(By.linkText(locator));
+    }
+    public void mouseHoverByCSSLocator(String locator) {
+        Actions action = new Actions(driver);
+        action.moveToElement(driver.findElement(By.cssSelector(locator))).build().perform();
+    }
+    public void dropDownByCSS(String locator, String value){
+
+        WebElement element=driver.findElement(By.cssSelector(locator));
+        Select select=new Select(element);
+        select.selectByVisibleText(value);
+
+    }
+    public void dropDownXpath(String locator, String value) throws InterruptedException {
+
+        WebElement element=driver.findElement(By.xpath(locator));
+        Select select=new Select(element);
+        select.selectByVisibleText(value);
+        sleepFor(2);
+
+    }
+
 
 
 }

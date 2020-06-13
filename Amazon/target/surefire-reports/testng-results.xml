@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report DirectoryC:\Users\maruf\Desktop\Selenium_group_2\TDDFramework_WEM_Winter_2020\Amazon\target\surefire-reports\html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-06-12T12:14:27 EDT" name="Amazon Automation Script" finished-at="2020-06-12T12:14:49 EDT" duration-ms="21570">
+    <groups>
+    </groups>
+    <test started-at="2020-06-12T12:14:27 EDT" name="HomePage" finished-at="2020-06-12T12:14:49 EDT" duration-ms="21570">
+      <class name="hometest.AccountListMouseHoverTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:27 EDT" name="extentSetup" finished-at="2020-06-12T12:14:27 EDT" duration-ms="356" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@298d9a05]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report DirectoryC:\Users\maruf\Desktop\Selenium_group_2\TDDFramework_WEM_Winter_2020\Amazon\target\surefire-reports\html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:27 EDT" name="setUp" finished-at="2020-06-12T12:14:36 EDT" duration-ms="8458" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[83]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.amazon.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:36 EDT" name="startExtent" finished-at="2020-06-12T12:14:36 EDT" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void hometest.AccountListMouseHoverTest.testAmazonAccountAndList() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testAmazonAccountAndList()[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:36 EDT" name="testAmazonAccountAndList" finished-at="2020-06-12T12:14:47 EDT" duration-ms="11258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAmazonAccountAndList -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:47 EDT" name="afterEachTestMethod" finished-at="2020-06-12T12:14:49 EDT" duration-ms="1793" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testAmazonAccountAndList status=SUCCESS method=AccountListMouseHoverTest.testAmazonAccountAndList()[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:49 EDT" name="cleanUp" finished-at="2020-06-12T12:14:49 EDT" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:hometest.AccountListMouseHoverTest@236e3f4e]" started-at="2020-06-12T12:14:49 EDT" name="generateReport" finished-at="2020-06-12T12:14:49 EDT" duration-ms="296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- hometest.AccountListMouseHoverTest -->
+    </test> <!-- HomePage -->
+  </suite> <!-- Amazon Automation Script -->
+</testng-results>
