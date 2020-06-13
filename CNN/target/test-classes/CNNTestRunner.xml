@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="Amazon Automation Script" parallel="false">
+<suite name="CNN Automation Script" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
@@ -13,7 +13,7 @@
     <!--        <parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="83"/>
-    <parameter name="url" value="https://www.amazon.com"/>
+    <parameter name="url" value="https://www.CNN.com"/>
 
 
 
@@ -21,11 +21,10 @@
 
     <test name="HomePage">
         <classes>
-            <class name="hometest.HomePageTest"></class>
-            <class name="hometest.HomePageTest2"></class>
-            <class name="hometest.HomePageTest3"></class>
-            <class name="hometest.HomePageTest4"></class>
-            <class name="hometest.HomePageTest5"></class>
+           <class name="hometest.HomePageTest"></class>
+            <class name="hometest.HomeTest2"></class>
+            <class name="hometest.HomeTest3"></class>
+
 
 
 

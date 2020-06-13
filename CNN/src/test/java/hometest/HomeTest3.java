@@ -5,7 +5,7 @@ import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class HomePageTest extends WebAPI {
+public class HomeTest3 extends WebAPI {
     static HomePage homePage;
 
     public static void getInitElements(){
@@ -13,9 +13,10 @@ public class HomePageTest extends WebAPI {
     }
 
     @Test
-    public void testTopBanner() throws InterruptedException {
+    public void testUsNews() throws InterruptedException {
         getInitElements();
-        homePage.bannerSelect();
+        homePage.usNews();
+
     }
 
 }

@@ -21,6 +21,11 @@
 
     <test name="HomePage">
         <classes>
+           <class name="hometest.HomePageTest"></class>
+            <class name="hometest.HomeTest2"></class>
+            <class name="hometest.HomeTest3"></class>
+            <class name="hometest.HomeTest4"></class>
+            <class name="hometest.HomeTest5"></class>
 
 
 

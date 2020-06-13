@@ -13,84 +13,122 @@ import static webelements.HomePageWebElements.*;
 public class HomePage extends WebAPI {
 
 
-
-//    @FindBy(css=shopLinksWebElements) public List<WebElement> shopLinks;
-    @FindBy(how = How.CSS,using = shopLinksWebElements) public List<WebElement> shopLinks;
+    @FindBy(how = How.CSS, using = shopLinksWebElements)
+    public List<WebElement> shopLinks;
 
     // Page Objects Design Pattern/Page object Model(POM)
-    @FindBy(how = How.CSS,using = searchBoxWebElement) public WebElement searchBox;
-    @FindBy(how = How.CSS,using = searchButtonWebElement) public WebElement searchButton;
+    @FindBy(how = How.CSS, using = searchBoxWebElement)
+    public WebElement searchBox;
+    @FindBy(how = How.CSS, using = searchButtonWebElement)
+    public WebElement searchButton;
     //@FindBy(how = How.XPATH,using = artNaturalWebElement) public WebElement artNatural;
-    @FindBy(css =artNaturalWebElement ) public WebElement artNatural;
-    @FindBy(how = How.CSS,using = qtyWebElement) public WebElement qty;
-    @FindBy(how = How.XPATH,using = selectQtyWebElement) public WebElement selectQty;
-    @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
-    @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
+    @FindBy(xpath = artNaturalWebElement)
+    public WebElement artNatural;
+    @FindBy(how = How.CSS, using = qtyWebElement)
+    public WebElement qty;
+    @FindBy(how = How.ID, using = selectQtyWebElement)
+    public WebElement selectQty;
+    @FindBy(how = How.ID, using = addToCartWebElement)
+    public WebElement addToCart;
+    @FindBy(how = How.ID, using = checkoutWebElement)
+    public WebElement checkout;
 
 
     //All the setup methods
 
     // Steps:1: // Enter keyword in search box
-    public  void enterKeyWord(String keyword){
+    public void enterKeyWord(String keyword) {
         // Enter keyword in search box
         searchBox.sendKeys(keyword);
     }
+
     // Steps:2:
-    public void clickSearchButton(){
+    public void clickSearchButton() {
         // Click searchButton
         searchButton.click();
     }
 
     // Steps:3:
-    public void clickProduct(){
+    public void clickProduct() {
         // Click Product
         artNatural.click();
     }
 
     // Steps:4:
-    public void clickQty(){
+    public void clickQty() {
         // Click Quantity
         qty.click();
     }
 
     // Steps:5:
-    public void doSelectQty(){
+    public void doSelectQty() {
         // Select Quantity
         selectQty.click();
     }
+
     // Steps:6:
-    public void clickAddToCart(){
+    public void clickAddToCart() {
         // Click Add to Cart
         addToCart.click();
     }
 
     // Steps:7:
-    public void clickCheckout(){
+    public void clickCheckout() {
         // Click Checkout
         checkout.click();
     }
 
 
     public void searchProduct() throws InterruptedException {
-       // setUp("windows","chrome","https://www.amazon.com/");
-        enterKeyWord("I Phone 11 pro");
+        // setUp("windows","chrome","https://www.amazon.com/");
+        enterKeyWord("smart phone");
         sleepFor(3);
         clickSearchButton();
         sleepFor(3);
         cleanUp();
     }
 
-public void validateSearchProduct(){
+    public void validateSearchProduct() {
 
-}
+    }
+
+    public void selectProduct() throws InterruptedException {
+        enterKeyWord("smart phone");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickProduct();
+
+    }
+
+    public void clickqty() throws InterruptedException {
+        enterKeyWord("smart phone");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickProduct();
+
+    }
+
+    public void AddToCart() throws InterruptedException {
+        enterKeyWord("smart phone");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickProduct();
 
 
+    }
+
+    public void setCheckout() throws InterruptedException {
+        enterKeyWord("smart phone");
+        sleepFor(3);
+        clickSearchButton();
+        sleepFor(3);
+        clickProduct();
 
 
-
-
-
-
+    }
 
 
 }
