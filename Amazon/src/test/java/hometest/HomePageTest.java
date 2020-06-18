@@ -21,13 +21,25 @@ public class HomePageTest extends WebAPI {
         getInitElements();
         homePage.searchProduct();
     }
-
     @Test //Nadim test 1
-    public void searchForChips() throws InterruptedException, IOException {
+    public void searchForItem1() throws InterruptedException, IOException {
         getInitElements();
         homePage.searchChips();
-
     }
+    @Test //Nadim test 2
+    public void searchForAmazonPrimeVideo() throws InterruptedException, IOException {
+        getInitElements();
+        homePage.clickAmazonPrimeVideo();
+    }
+    @Test //Nadim test 3
+    public void goToYourAccount() throws InterruptedException, IOException {
+        getInitElements();
+        homePage.hoverAccountListAndClickYourAccount();
+    }
+
+
+
+
 
 
 

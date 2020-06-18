@@ -1,7 +1,9 @@
 package home;
 
 import common.WebAPI;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -28,9 +30,19 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
 
-    //CHIPS
+    //Nadim
     @FindBy(how = How.XPATH, using = "//span[contains(text(),'Pringles Potato Crisps Chips, Flavored 15 Count Va')]")
     public WebElement leChips;
+    @FindBy(how = How.XPATH, using = "//a[@id='nav-hamburger-menu']")
+    public WebElement amazonMainMenuDropDown;
+    @FindBy(how = How.XPATH, using = "//div[@id='hmenu-container']//li[2]//a[1]")
+    public WebElement amazonPrimeVideo;
+    @FindBy(how = How.XPATH, using = "//ul[@class='hmenu hmenu-visible hmenu-translateX']//li[3]//a[1]")
+    public WebElement amazonActualPrimeVideo;
+    @FindBy(how = How.XPATH, using = "//a[@id='nav-link-accountList']")
+    public WebElement accountAndLists;
+    @FindBy(how = How.XPATH, using = "//span[contains(text(),'Your Account')]")
+    public WebElement accountAndListsYourAccount;
 
 
     // Steps:1: // Enter keyword in search box
@@ -98,6 +110,27 @@ public class HomePage extends WebAPI {
         sleepFor(3);
         cleanUp();
     }
+
+    public void clickAmazonPrimeVideo() throws InterruptedException, IOException {
+        setUp(true, "", "windows", "", "chrome", "", "https://www.amazon.com");
+        amazonMainMenuDropDown.click();
+        sleepFor(2);
+        amazonPrimeVideo.click();
+        sleepFor(2);
+        amazonActualPrimeVideo.click();
+    }
+
+    public void hoverAccountListAndClickYourAccount() throws InterruptedException, IOException {
+        setUp(true, "", "windows", "", "chrome", "", "https://www.amazon.com");
+        sleepFor(3);
+        WebElement searchBtn = driver.findElement(By.xpath("//span[contains(@class,'nav-line-2')][contains(text(),'Account & Lists')]"));
+        sleepFor(3);
+        Actions action = new Actions(driver);
+        action.moveToElement(searchBtn).perform();
+        accountAndListsYourAccount.click();
+        sleepFor(2);
+    }
+
 
 
 
