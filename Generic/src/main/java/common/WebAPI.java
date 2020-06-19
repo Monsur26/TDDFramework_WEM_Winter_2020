@@ -120,7 +120,7 @@ public class WebAPI {
         } else {
             getLocalDriver(os, browserName);
         }
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
         //driver.manage().window().maximize();
