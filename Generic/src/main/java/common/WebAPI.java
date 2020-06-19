@@ -100,8 +100,8 @@ public class WebAPI {
 
     //Browser SetUp
     public static WebDriver driver = null;
-    public String browserstack_username = "monsurahmed1";
-    public String browserstack_accesskey = "VdzwavDy2G49LUuep9Sq";
+    public String browserstack_username = "anikaislam2";
+    public String browserstack_accesskey = "qke7i757kjsuZiEKdNB7";
     public String saucelabs_username = "monsurahmed1";
     public String saucelabs_accesskey = "48bd964a-506f-4ad1-a5f5-f37e060bbea5";
 
@@ -643,5 +643,19 @@ public class WebAPI {
         return text;
     }
 
+    public void dropDownByCSS(String locator, String value){
 
+        WebElement element=driver.findElement(By.cssSelector(locator));
+        Select select=new Select(element);
+        select.selectByVisibleText(value);
+
+    }
+    public void dropDownXpath(String locator, String value) throws InterruptedException {
+
+        WebElement element=driver.findElement(By.xpath(locator));
+        Select select=new Select(element);
+        select.selectByVisibleText(value);
+        sleepFor(2);
+
+    }
 }
