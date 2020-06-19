@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 
 
 public class HomeTest3 extends WebAPI {
-    static HomePage homePage; // Reference Variable/ object of HomePage
-
-
+    static HomePage homePage;
     public static void getInitElements(){
         homePage= PageFactory.initElements(driver, HomePage.class);
     }

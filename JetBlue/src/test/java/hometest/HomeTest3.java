@@ -7,9 +7,7 @@ import org.testng.annotations.Test;
 
 
 public class HomeTest3 extends WebAPI {
-    static HomePage homePage; // Reference Variable/ object of HomePage
-
-
+    static HomePage homePage;
     public static void getInitElements(){
         homePage= PageFactory.initElements(driver, HomePage.class);
     }
@@ -17,6 +15,6 @@ public class HomeTest3 extends WebAPI {
     @Test
     public void testAirportAndOneWaySelect() throws InterruptedException {
         getInitElements();
-        homePage.airportAndOneWaySelect();
+        homePage.tripTypeSelect();
     }
 }

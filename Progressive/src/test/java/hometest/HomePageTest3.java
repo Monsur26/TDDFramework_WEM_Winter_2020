@@ -5,15 +5,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class HomePageTest3 extends WebAPI {
-    static HomePage homePage; // Reference Variable/ object of HomePage
-
-
+    static HomePage homePage;
     public static void getInitElements() {
         homePage = PageFactory.initElements(driver, HomePage.class);
     }
 
     @Test
-    public void testclickAnswersButton() throws InterruptedException {
+    public void testClickAnswersButton() throws InterruptedException {
         getInitElements();
         homePage.clickAnswersButton();
     }

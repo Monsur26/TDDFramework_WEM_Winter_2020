@@ -7,18 +7,15 @@ import org.testng.annotations.Test;
 
 public class HomePageTest extends WebAPI {
     static HomePage homePage; // Reference Variable/ object of HomePage
-
-
     public static void getInitElements(){
         homePage= PageFactory.initElements(driver, HomePage.class);
     }
-
 
     @Test
     public void testSearchProduct() throws InterruptedException {
         getInitElements();
         homePage.searchProduct();
-        homePage.validateSearchProduct("I Phone 11 pro");
+       homePage.validateSearchProduct();
     }
 
 

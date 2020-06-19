@@ -5,9 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class HomePageTest3 extends WebAPI {
-    static HomePage homePage; // Reference Variable/ object of HomePage
-
-
+    static HomePage homePage;
     public static void getInitElements(){
         homePage= PageFactory.initElements(driver, HomePage.class);
     }
@@ -16,6 +14,6 @@ public class HomePageTest3 extends WebAPI {
     public void testSearchProductSelectqty() throws InterruptedException {
         getInitElements();
         homePage.searchProductSelectqty();
-        homePage.validateSearchProductSelectandqty("Hand Sanitizer");
+        homePage.validateSearchProductSelectandqty();
     }
 }

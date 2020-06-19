@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 
 
 public class HomePageTest5 extends WebAPI {
-    static HomePage homePage; // Reference Variable/ object of HomePage
-
-
+    static HomePage homePage;
     public static void getInitElements(){
         homePage= PageFactory.initElements(driver, HomePage.class);
     }
@@ -17,5 +15,6 @@ public class HomePageTest5 extends WebAPI {
     public void testCheckoutItem() throws InterruptedException {
         getInitElements();
         homePage.checkout();
+        homePage.validateCheckout();
     }
 }

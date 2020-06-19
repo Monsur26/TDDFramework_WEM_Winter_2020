@@ -16,5 +16,6 @@ public class HomePageTest7 extends WebAPI {
     public void testDropDownItemSearch(){
         getInitElements();
         homePage.dropdownMenuItemSelectByIndex();
+        homePage.validateDropdownItemSelect();
     }
 }
