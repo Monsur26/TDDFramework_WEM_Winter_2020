@@ -31,66 +31,47 @@ public class HomePage extends WebAPI {
     // setup methods
     //step 1
     public void TopbannerSelecting() {
-        topBanner.click();
-    }
-
+        topBanner.click();  }
     //step 2
     public void Navigating() {
-        navigationBox.click();
-    }
-
+        navigationBox.click(); }
     //step 3
     public void Selectbutton(String itemName) {
-        selectButton.sendKeys(itemName);
-    }
-
+        selectButton.sendKeys(itemName); }
     //step 4
     public void USnewsLinkbar() {
-        USnewsLink.click();
-    }
-
-    //step 4
-    public void setSportsLink() {
-        sportsLinkselect.click();
-    }
-
+        USnewsLink.click(); }
     //step 5
-
-public void setEdition() {
+    public void setSportsLink() {
+        sportsLinkselect.click(); }
+    //step 6
+    public void setEdition() {
         edition.click();
-}
-
-    // Test case methods
+    }
 
     //Test case1
     public void bannerSelect() throws InterruptedException {
         TopbannerSelecting();
         sleepFor(1);
     }
-
     //Test case2
     public void boxNavigation() throws InterruptedException {
         Navigating();
-        sleepFor(3);
         Selectbutton("Culture");
-        sleepFor(3);
     }
-
     //Test case3
     public void usNews() throws InterruptedException {
         USnewsLinkbar();
         sleepFor(3);
     }
-
     //Test case4
     public void sportsLink() throws InterruptedException {
-        sportsLink();
+        setSportsLink();
         sleepFor(3);
     }
     //Test case 5
     public void editionSet() throws InterruptedException {
-        editionSet();
+        setEdition();
         sleepFor(3);
     }
-
 }
