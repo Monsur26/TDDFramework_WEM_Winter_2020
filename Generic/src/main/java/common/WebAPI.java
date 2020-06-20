@@ -652,9 +652,9 @@ public class WebAPI {
     public void getLink(String locator){
         driver.findElements(By.linkText(locator));
     }
-    public void mouseHoverByCSSLocator(String locator) {
+    public void mouseHoverByCSSLocator(WebElement webElement) {
         Actions action = new Actions(driver);
-        action.moveToElement(driver.findElement(By.cssSelector(locator))).build().perform();
+        action.moveToElement(driver.findElement(By.cssSelector(String.valueOf(webElement)))).build().perform();
     }
     public void dropDownByCSS(String locator, String value){
 

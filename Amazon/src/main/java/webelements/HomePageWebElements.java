@@ -11,11 +11,9 @@ public class HomePageWebElements {
         public static final String addToCartWebElement="add-to-cart-button";
         public static final String checkoutWebElement="hlb-ptc-btn-native";
         public static final String shopLinksWebElements="#nav-xshop > a";
-
         public static final String searchTodaysDealWebelement="Today's Deals";
         public static final String bestSellerWebElement="//*[@id=\"nav-xshop\"]/a[1]";
         public static final String bestSellerBooksWebElement="#zg_browseRoot > ul > li:nth-child(11) > a";
-//        public static final String newReleasesWebElement ="New Releases";
         public static final String moviesTvWebElement ="Movies & Tv";
         public static final String selectLysolWebElement="//span[contains(text(),'Lysol Disinfectant Spray, Crisp Linen, 38oz (2X19o')]";
         public static final String selectDisposableGlovesWebelement="//span[contains(text(),'Vinyl Gloves, Disposable Gloves, Comfortable, Powd')]";
@@ -26,19 +24,6 @@ public class HomePageWebElements {
         public static final String selectElectronicsWebelement="Electronics";
         public static final String selectTvVideoWebelement="TV & Video";
         public static final String selectTelevisionsWebelement="televisions";
-
         public static final String newReleasesWebElement="New Releases";
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

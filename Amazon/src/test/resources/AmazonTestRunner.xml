@@ -15,10 +15,6 @@
     <parameter name="browserVersion" value="83"/>
     <parameter name="url" value="https://www.amazon.com"/>
 
-
-
-
-
     <test name="HomePage">
         <classes>
             <class name="hometest.HomePageTest"></class>
@@ -31,21 +27,10 @@
             <class name="hometest.HomePageTest8"></class>
             <class name="hometest.HomePageTest9"></class>
             <class name="hometest.HomePageTest10"></class>
-
-
             <class name="hometest.AccountListMouseHoverTest"></class>
 
-
-
-
-
         </classes>
-
     </test>
-
-
-
-
 </suite>
 
 

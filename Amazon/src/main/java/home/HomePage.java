@@ -13,29 +13,20 @@ import static webelements.HomePageWebElements.selectTelevisionsWebelement;
 
 public class HomePage extends WebAPI {
 
-
-
-//    @FindBy(css=shopLinksWebElements) public List<WebElement> shopLinks;
     @FindBy(how = How.CSS,using = shopLinksWebElements) public List<WebElement> shopLinks;
-
-    // Page Objects Design Pattern/Page object Model(POM)
     @FindBy(how = How.CSS,using = searchBoxWebElement) public WebElement searchBox;
     @FindBy(how = How.CSS,using = searchButtonWebElement) public WebElement searchButton;
-    //@FindBy(how = How.XPATH,using = artNaturalWebElement) public WebElement artNatural;
     @FindBy(css =artNaturalWebElement ) public WebElement artNatural;
     @FindBy(how = How.CSS,using = qtyWebElement) public WebElement qty;
     @FindBy(how = How.XPATH,using = selectQtyWebElement) public WebElement selectQty;
     @FindBy(how = How.ID,using = addToCartWebElement) public WebElement addToCart;
     @FindBy(how = How.ID,using = checkoutWebElement) public WebElement checkout;
-
     @FindBy(how = How.LINK_TEXT, using = searchTodaysDealWebelement) public WebElement todaysDeal;
     @FindBy(how=How.XPATH,using = bestSellerWebElement) public WebElement bestSeller;
     @FindBy(how = How.CSS,using = bestSellerBooksWebElement) public WebElement bestSellerBooks;
-//    @FindBy(how = How.LINK_TEXT, using = newReleasesWebElement) public WebElement newRelease;
     @FindBy(how = How.LINK_TEXT, using = moviesTvWebElement) public WebElement moviesTv ;
     @FindBy(how = How.XPATH, using = selectLysolWebElement) public WebElement lysol;
     @FindBy(how = How.XPATH, using = selectDisposableGlovesWebelement) public WebElement disposableGloves;
-
     @FindBy(how = How.LINK_TEXT, using = searchFindAGiftWebelement) public WebElement findAGift;
     @FindBy(how = How.LINK_TEXT, using = searchGiftForKidsWebelement) public WebElement giftForKids;
     @FindBy(how = How.CSS, using = accountListWebelement) public WebElement accountList;
@@ -43,75 +34,33 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.LINK_TEXT, using = selectElectronicsWebelement) public WebElement electronics;
     @FindBy(how = How.LINK_TEXT, using = selectTvVideoWebelement) public WebElement tvVideo;
     @FindBy(how = How.LINK_TEXT, using = selectTelevisionsWebelement) public WebElement television;
-
     @FindBy(how = How.LINK_TEXT, using = newReleasesWebElement) public WebElement newReleases;
 
-    // Steps:1: // Enter keyword in search box
-    public  void enterKeyWord(String keyword){
-        // Enter keyword in search box
-        searchBox.sendKeys(keyword);
-    }
-    // Steps:2:
-    public void clickSearchButton(){
-        // Click searchButton
-        searchButton.click();
-    }
-
-    // Steps:3:
-    public void clickProduct(){
-        // Click Product
-        artNatural.click();
-    }
-
-    // Steps:4:
-    public void clickQty(){
-        // Click Quantity
-        qty.click();
-    }
-
-    // Steps:5:
-    public void doSelectQty(){
-        // Select Quantity
-        selectQty.click();
-    }
-    // Steps:6:
-    public void clickAddToCart(){
-        // Click Add to Cart
-        addToCart.click();
-    }
-
-    // Steps:7:
-    public void clickCheckout(){
-        // Click Checkout
-        checkout.click();
-    }
-
+    public void enterKeyWord(String keyword) { searchBox.sendKeys(keyword); }
+    public void clickSearchButton() { searchButton.click(); }
+    public void clickProduct(){ artNatural.click(); }
+    public void clickQty(){ qty.click(); }
+    public void doSelectQty(){ selectQty.click(); }
+    public void clickAddToCart(){ addToCart.click(); }
+    public void clickCheckout(){ checkout.click(); }
+    public void todaysDealLink(){ todaysDeal.click(); }
+    public void bestSellerLink(){ bestSeller.click(); }
+    public void bestSellerBooksLink(){ bestSellerBooks.click(); }
     public void amazonTodaysDeal() throws InterruptedException {
         getWindowsMaximize();
-        sleepFor(2);
-        todaysDeal.click();
-        getLink("Today's Deal");
+        todaysDealLink();
         sleepFor(2);
     }
     public void bestSellerProduct() throws InterruptedException {
         getWindowsMaximize();
-        sleepFor(2);
-        bestSeller.click();
+        bestSellerLink();
         sleepFor(2);
     }
-
     public void checkBestSellerBooks() throws InterruptedException {
-//        getWindowsMaximize();
-//        bestSeller.click();
-//        sleepFor(3);
-        bestSellerProduct();
-        bestSellerBooks.click();
+        bestSellerLink();
+        bestSellerBooksLink();
         sleepFor(2);
-
     }
-
-
-
     public void searchProduct() throws InterruptedException {
        // setUp("windows","chrome","https://www.amazon.com/");
         enterKeyWord("I Phone 11 pro");
@@ -120,25 +69,12 @@ public class HomePage extends WebAPI {
         sleepFor(3);
         cleanUp();
     }
-
-
     public void AmazonAccountLists() throws InterruptedException {
         getWindowsMaximize();
         sleepFor(3);
-//        mouseHoverByCSSLocator("#nav-link-accountList");
         mouseHoverByCSS("#nav-link-accountList");
         sleepFor(5);
     }
-//    public void selectProduct() throws InterruptedException {
-//        getWindowsMaximize();
-//        enterKeyWord("disinfectant spray");
-//        sleepFor(3);
-//        clickSearchButton();
-//        sleepFor(3);
-//        lysol.click();
-//        sleepFor(3);
-//    }
-
     public void productSearch() throws InterruptedException {
         getWindowsMaximize();
         enterKeyWord("disinfectant wipes");
@@ -164,7 +100,6 @@ public class HomePage extends WebAPI {
         sleepFor(2);
     }
     public void amazonProductMenuBar() throws InterruptedException {
-//        amazonMainMenu();
         getWindowsMaximize();
         sleepFor(2);
         mainmenu.click();
@@ -173,7 +108,6 @@ public class HomePage extends WebAPI {
         sleepFor(2);
         tvVideo.click();
         television.click();
-
     }
     public void amazonTryPrime() throws InterruptedException {
         getWindowsMaximize();
@@ -186,20 +120,9 @@ public class HomePage extends WebAPI {
         sleepFor(2);
         newReleases.click();
         sleepFor(5);
-
     }
 
-        public void validateSearchProduct(){
+    public void validateSearchProduct(){
 
-}
-
-
-
-
-
-
-
-
-
-
+    }
 }
