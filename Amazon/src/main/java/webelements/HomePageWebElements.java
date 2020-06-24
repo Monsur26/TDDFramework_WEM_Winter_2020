@@ -11,11 +11,22 @@ public class HomePageWebElements {
         public static final String addToCartWebElement="add-to-cart-button";
         public static final String checkoutWebElement="hlb-ptc-btn-native";
         public static final String shopLinksWebElements="#nav-xshop > a";
-
-
-
-
-
+        public static final String clickItem="//div[@class='s-main-slot s-result-list s-search-results sg-row']//div[2]//div[1]//span[1]//div[1]//div[1]//div[1]//div[1]//div[2]//div[2]//div[1]//div[1]//div[1]//div[1]//div[1]//h2[1]//a[1]";
+//      public static final String wholeFoodsWebElement="#nav-xshop > a:nth-child(7)";
+        public static final String homeIconWebElement="i[class='hm-icon nav-sprite']";
+        public static final String bestSellersWebElement="//a[contains(text(),'Best Sellers')]";
+        public static final String customerServiceWebElement="//a[contains(text(),'Customer Service')]";
+        public static final String findGiftWebElement="//a[contains(text(),'Customer Service')]";
+        public static final String accountAndListtWebElement="//span[contains(@class,'nav-line-2')][contains(text(),'Account & Lists')]";
+        public static final String earPodProtWebElement="//div[9]//div[1]//span[1]//div[1]//div[1]//div[2]//div[2]//div[1]//div[1]//div[1]//div[1]//div[1]//h2[1]//a[1]//span[1]";
+//        public static final String newReleaseWebElement="//a[contains(text(),'New Releases')]]";
+        public static final String signInWebElement="//input[@id='ap_email']";
+        public static final String orderWebElement="//input[@id='ap_email']";
+        public static final String cartWebElement="//input[@id='ap_email']";
+        public static final String signInTOWebElement="//input[@id='ap_email']";
+        public static final String listsWebElement="//input[@id='ap_email']";
+        public static final String todaysDealMhWebElement="//input[@id='ap_email']";
+        public static final String earPodProItemWebElement="//div[7]//div[1]//span[1]//div[1]//div[1]//div[2]//h2[1]//a[1]//span[1]";
 
 
 
