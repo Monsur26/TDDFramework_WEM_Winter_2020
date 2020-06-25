@@ -8,9 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
-
 import static webelements.HomePageWebElements.*;
 
 public class HomePage extends WebAPI {
@@ -32,25 +32,18 @@ public class HomePage extends WebAPI {
     @FindBy(xpath = passwordWebElement) public WebElement password;
     @FindBy(xpath = rememberCheckBoxWebElement) public WebElement rememberMECHkBox;
     @FindBy(xpath = loginButtonWebElement) public WebElement loginButton;
+    @FindBy(xpath = tdLogoWebElement) public WebElement tdLogo;
 
     public void region(){
         regionSelect.click();
     }
     public void regionCanada(){canadaSelect.click();}
-    public void loginDD(){
-        Actions actions=new Actions(driver);
-        actions.moveToElement(loginDropDown).perform();
-    }
-    public void onlineBankingLink(){ onlineBankingLInk.click();
-    }
-    public void proDD(){
-        Actions ac=new Actions(driver);
-        ac.moveToElement(productsDropDown).perform();}
+    public void loginDD(){ mouseHover(loginDropDown); }
+    public void onlineBankingLink(){ onlineBankingLInk.click(); }
+    public void proDD(){ mouseHover(productsDropDown); }
     public void CDs(){CDs.click();}
     public void commercialLInk(){commercialLInk.click();}
-    public void industriesDD(){
-        Actions a=new Actions(driver);
-        a.moveToElement(industriesDD).perform();}
+    public void industriesDD(){ mouseHover(industriesDD); }
     public void questionsSearchBox(String query){questionsSB.sendKeys(query);}
     public void askButton(){askNowButton.click();}
     public void popularQA(){popularQuestionsMenu.click();}
@@ -62,14 +55,11 @@ public class HomePage extends WebAPI {
     public void rememberChkBox(){rememberMECHkBox.click();}
     public void loginButton(){loginButton.click();}
 
-
-
     public void regionSelectOptions(){
         region();
         regionCanada();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        implicitWait(5);
     }
-
     public void loginDropDown() throws InterruptedException {
         loginDD();
         onlineBankingLink();
@@ -77,20 +67,16 @@ public class HomePage extends WebAPI {
     public void onlineBankingSelectToNewWindow() throws InterruptedException {
         loginDD();
         onlineBankingLink();
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
-        sleepFor(5);
+        windowSwitch();
+        implicitWait(5);
     }
     public void onlineBankingSelectAndSwitchingWindow() throws InterruptedException {
         loginDD();
         onlineBankingLink();
         String winHandleBefore = driver.getWindowHandle();
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
-        sleepFor(5);
-        driver.switchTo().window(winHandleBefore);
+        windowSwitch();
+        implicitWait(5);
+        switchToPreviousWindow(winHandleBefore);
     }
     public void productsDropDown(){
         proDD();
@@ -107,27 +93,44 @@ public class HomePage extends WebAPI {
     public void popularQuestionsLink() throws InterruptedException {
         popularQA();
         openingBankAccQuestion();
-        sleepFor(10);
+        sleepFor(5);
         openingBankAccQuestion();
     }
     public void rightAndLeftArrowSlide(){
         setRightArrowSlide();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        implicitWait(5);
         setLeftArrowSlide();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        implicitWait(5);
     }
     public void loginFunctions() throws InterruptedException {
         loginDD();
         onlineBankingLink();
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
-        sleepFor(5);
+        windowSwitch();
         userName("Noname");
         password("NoPass");
         rememberChkBox();
         loginButton();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        implicitWait(5);
+    }
+    public void validateRegion(){
+        String actual=regionSelect.getText();
+        Assert.assertEquals(actual,"Select country","not successful");
+    }
+    public void validateLoginDD(){
+        String actual=loginDropDown.getText();
+        Assert.assertEquals(actual,"","not successful");
+    }
+    public void validateTDLogo(){
+        String actual=tdLogo.getText();
+        Assert.assertEquals(actual,"","not successful");
+    }
+    public void validateIndustriesDD(){
+        String actual=industriesDD.getText();
+        Assert.assertEquals(actual,"","not successful");
+    }
+    public void validateAskNOw(){
+        String actual=askNowButton.getText();
+        Assert.assertEquals(actual,"Ask now","not successful");
     }
 
 

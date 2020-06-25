@@ -21,12 +21,8 @@
 
     <test name="HomePage">
         <classes>
-                    <class name="hometest.HomeTest1"></class>
-                    <class name="hometest.HomeTest2"></class>
-                    <class name="hometest.HomeTest3"></class>
-                    <class name="hometest.HomeTest4"></class>
-                    <class name="hometest.HomeTest5"></class>
-                    <class name="hometest.HomeTest6"></class>
+                    <class name="hometest.HomePageTest"></class>
+
 
 
 

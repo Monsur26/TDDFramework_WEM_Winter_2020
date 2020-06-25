@@ -1,9 +1,15 @@
 package home;
 import common.WebAPI;
+import datasource.ReadExcelFile;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+
+import javax.print.DocFlavor;
+import java.awt.datatransfer.Clipboard;
 
 import static homepagewebelements.HomePageWebElements.*;
 
@@ -19,6 +25,7 @@ public class HomePage extends WebAPI{
     @FindBy(css = userAccountButtonWebElement)public WebElement userAcc;
     @FindBy(xpath = emailWebElement)public WebElement email;
     @FindBy(xpath = passwordWebElement)public WebElement password;
+    @FindBy(xpath = CNNlogoWebElement)public WebElement CNNLogo;
 
     public void menuBoxGenerating(){
         menuBox.click();
@@ -47,6 +54,10 @@ public class HomePage extends WebAPI{
         menuBoxGenerating();
         sleepFor(2);
     }
+    public void validateMenu(){
+        String actual=menuBox.getText();
+        Assert.assertEquals(actual,"","not successful");
+    }
     public void menuSerachforitem() throws InterruptedException {
         menuBoxGenerating();
         heeadersearchbox("Donald Trump");
@@ -67,14 +78,26 @@ public class HomePage extends WebAPI{
         sleepFor(10);
     }
     public void hoverToUserAcc(){
-        Actions actions=new Actions(driver);
-        actions.moveToElement(userAcc).perform();
+        mouseHover(userAcc);
     }
-
     public void useraccdetails() throws InterruptedException {
         userACC();
         emaillogin("DJT@WH.com");
-        passwordadd("MAGA");
+        passwordadd("Melania");
+    }
+
+    public void userACCFromExcel(String login, String password){
+        userACC();
+        emaillogin(login);
+        passwordadd(password);
+
+    }
+    public void windowScroll(){
+        scrollUpDownByHeight();
+    }
+    public void validatingCNNLogo(){
+        String actual=CNNLogo.getText();
+        Assert.assertEquals(actual,"","not successful");
     }
 
 }

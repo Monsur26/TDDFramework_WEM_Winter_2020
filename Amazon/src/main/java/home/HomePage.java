@@ -1,21 +1,18 @@
 package home;
 
 import common.WebAPI;
+import database.Database;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static webelements.HomePageWebElements.*;
 
-
 public class HomePage extends WebAPI {
-
     @FindBy(how = How.CSS,using = shopLinksWebElements) public List<WebElement> shopLinks;
     @FindBy(how = How.CSS,using = searchBoxWebElement) public WebElement searchBox;
     @FindBy(how = How.CSS,using = searchButtonWebElement) public WebElement searchButton;
@@ -52,16 +49,13 @@ public class HomePage extends WebAPI {
         checkout.click();
     }
     public void accountsMenuHover(){
-        Actions ac=new Actions(driver);
-        ac.moveToElement(accountsMenu).perform();
+        mouseHover(accountsMenu);
     }
     public void dropdownMenu(int indexNumber){
-        Select s=new Select(dropdownMenu);
-        s.selectByIndex(indexNumber);
+        selectDropDownByIndex(dropdownMenu,indexNumber);
     }
     public void languageMouseHover(){
-       Actions a=new Actions(driver);
-       a.moveToElement(hoverLanguage).perform();
+       mouseHover(hoverLanguage);
     }
     public void espaniolRadioButton(){
         espaniolRadioButton.click();
@@ -162,6 +156,11 @@ public class HomePage extends WebAPI {
         String actual=menuOptions.getText();
         Assert.assertEquals(actual,"","not successful");
     }
+    public void searchProductFromDB(String keyword) throws Exception {
+        enterKeyWord(keyword);
+        clickSearchButton();
+    }
+
 
 
 

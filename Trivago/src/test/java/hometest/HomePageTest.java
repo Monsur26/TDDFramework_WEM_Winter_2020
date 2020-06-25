@@ -31,6 +31,7 @@ public class HomePageTest extends WebAPI {
     public void testArrowSlide(){
         getInitElements();
         homePage.arrowSlide();
+        homePage.validateArrowSlide();
     }
    @Test(priority = 5)
     public void testEmailSubscription(){

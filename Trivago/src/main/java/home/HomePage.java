@@ -8,7 +8,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import static webelements.HomePageWebElements.*;
 
 public class HomePage extends WebAPI {
@@ -37,19 +36,10 @@ public class HomePage extends WebAPI {
     @FindBy(xpath = trivagoInstavalidateWebElement) public WebElement trivagoInstaval;
 
 
-    public void setMenuHover(){
-        Actions actions=new Actions(driver);
-        actions.moveToElement(menuHover).perform();
-    }
+    public void setMenuHover(){ mouseHover(menuHover); }
     public void setBookingOverview(){ bookingOverview.click();}
-    public void setUSDDropDown(){
-        Select select=new Select(driver.findElement(By.xpath(USDDropDownWebElement)));
-        select.selectByIndex(0);
-    }
-    public void nationsDropDown(){
-        Select select=new Select(driver.findElement(By.xpath(nationsDropdownWebElement)));
-        select.selectByIndex(4);
-    }
+    public void setUSDDropDown(){ selectDropDownByIndex(USDDropDown,0); }
+    public void nationsDropDown(){ selectDropDownByIndex(countryDropDown,0); }
     public void rightArrowSlide(){rightArrowSlide.click();}
     public void leftArrowSlide(){leftArrowSlide.click();}
     public void setEmailBox(String email){emailBox.sendKeys(email);}
@@ -70,12 +60,8 @@ public class HomePage extends WebAPI {
     public void searchButton(){searchButton.click();}
     public void trivagoInsta(){
         trivagoInsta.click();
-        for(String winHandle : driver.getWindowHandles()){
-            driver.switchTo().window(winHandle);
-        }
-
+        windowSwitch();
     }
-
 
     public void menuHoverAndSelect(){
         setMenuHover();
@@ -101,6 +87,7 @@ public class HomePage extends WebAPI {
         Assert.assertEquals(actual,"Belgie","not successful");
     }
     public void arrowSlide(){
+        windowMaximize();
         rightArrowSlide();
         rightArrowSlide();
         leftArrowSlide();

@@ -11,6 +11,6 @@ public class HomePageWebElements {
     public static final String userAccountButtonWebElement="#account-icon-button > svg";
     public static final String emailWebElement="//*[@id=\"login-modal-content\"]/form/label/div/input";
     public static final String passwordWebElement="//*[@id=\"login-modal-content\"]/form/div[1]/label/div/input";
-
+    public static final String CNNlogoWebElement="/html[1]/body[1]/div[5]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/div[1]/a[1]/*[local-name()='svg'][1]/*[name()='rect'][1]";
 
 }

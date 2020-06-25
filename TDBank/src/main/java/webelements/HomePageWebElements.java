@@ -19,5 +19,6 @@ public class HomePageWebElements {
     public static final String passwordWebElement="//input[@name='password']";
     public static final String rememberCheckBoxWebElement="//label[@class='ng-binding card']";
     public static final String loginButtonWebElement="//button[contains(text(),'Log in')]";
+    public static final String tdLogoWebElement="//html//body//div//div//div//a";
 
 }
