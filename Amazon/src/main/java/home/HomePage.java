@@ -38,83 +38,50 @@ public class HomePage extends WebAPI {
   @FindBy(how = How.XPATH,using = popcornWebElements) public WebElement popcorn;
   @FindBy(how = How.XPATH,using = headphonesWebElements) public WebElement headphones;
 
-    // Steps:1: // Enter keyword in search box
     public  void enterKeyWord(String keyword){
-        // Enter keyword in search box
         searchBox.sendKeys(keyword);
     }
-    // Steps:2:
     public void clickSearchButton(){
-        // Click searchButton
         searchButton.click();
     }
-
-    // Steps:3:
     public void clickProduct(){
-        // Click Product
         artNatural.click();
     }
-
-    // Steps:4:
     public void clickQty(){
-        // Click Quantity
         qty.click();
     }
-
-   //  Steps:5:
     public void doSelectQty(){
-        // Select Quantity
         selectQty.click();
     }
-    // Steps:6:
     public void clickAddToCart(){
-        // Click Add to Cart
         addToCart.click();
     }
-
-    // Steps:7:
     public void clickCheckout(){
-        // Click Checkout
         checkout.click();
     }
-
-    //Step 8: STICKERS
     public void clickStickers(){
-        //click Stickers
         stickers.click();
     }
-
-    //Step 9: SANDALS
         public void clickSandals(){
-            //click sandals
             sandals.click();
         }
-    //Step 9: FLOWERS
-    public void clickFlowers(){
-        //click sandals
+        public void clickFlowers(){
         flowers.click();
     }
-    //Step 9: PEN
     public void clickPen(){
-        //click sandals
         pen.click();
     }
-    //Step 9: MIRROR
     public void clickMirror(){
-        //click sandals
         mirror.click();
     }
-    //Step 9: PILLOW
     public void clickPillow(){
         //click pillow
         pillow.click();
     }
-    //Step 9: PILLOW
     public void clickPopcorn(){
         //click pillow
         popcorn.click();
     }
-    //Step 9: PILLOW
     public void clickHeadphones(){
         //click pillow
         headphones.click();

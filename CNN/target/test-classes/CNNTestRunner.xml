@@ -23,15 +23,15 @@
         <classes>
 
 
-<!--            <class name="hometest.CNNTest1"></class>-->
-<!--            <class name="hometest.CNNTest2"></class>-->
-<!--            <class name="hometest.CNNTest3"></class>-->
-<!--            <class name="hometest.CNNTest4"></class>-->
-<!--            <class name="hometest.CNNTest5"></class>-->
-<!--            <class name="hometest.CNNTest6"></class>-->
-<!--            <class name="hometest.CNNTest7"></class>-->
-<!--            <class name="hometest.CNNTest8"></class>-->
-<!--            <class name="hometest.CNNTest9"></class>-->
+            <class name="hometest.CNNTest1"></class>
+            <class name="hometest.CNNTest2"></class>
+            <class name="hometest.CNNTest3"></class>
+            <class name="hometest.CNNTest4"></class>
+            <class name="hometest.CNNTest5"></class>
+            <class name="hometest.CNNTest6"></class>
+            <class name="hometest.CNNTest7"></class>
+            <class name="hometest.CNNTest8"></class>
+            <class name="hometest.CNNTest9"></class>
             <class name="hometest.CNNTest10"></class>
 
 

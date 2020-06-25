@@ -4,7 +4,7 @@ import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class TDTest1 extends WebAPI{
+public class TDTest4 extends WebAPI{
     static HomePage homePage; // Reference Variable/ object of HomePage
 
 
@@ -14,9 +14,9 @@ public class TDTest1 extends WebAPI{
 
 
     @Test
-    public void teststudent() throws InterruptedException {
+    public void testsearch() throws InterruptedException {
         getInitElements();
-        homePage.student();
+        homePage.search();
     }
 
 

@@ -5,7 +5,7 @@ import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class UHCTest1 extends WebAPI{
+public class UHCTest2 extends WebAPI{
     static HomePage homePage; // Reference Variable/ object of HomePage
 
 
@@ -15,7 +15,7 @@ public class UHCTest1 extends WebAPI{
 
 
     @Test
-    public void testinsurance() throws InterruptedException {
+    public void testdragdrop() throws InterruptedException {
         getInitElements();
-        homePage.insurance();
+        homePage.dragdrop();
     }}

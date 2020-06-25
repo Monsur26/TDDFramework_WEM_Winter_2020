@@ -5,7 +5,7 @@ import home.HomePage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
-public class UHCTest3 extends WebAPI{
+public class UHCTest7 extends WebAPI{
     static HomePage homePage; // Reference Variable/ object of HomePage
 
 
@@ -15,7 +15,7 @@ public class UHCTest3 extends WebAPI{
 
 
     @Test
-    public void testplan() throws InterruptedException {
+    public void testlogin() throws InterruptedException {
         getInitElements();
-        homePage.plan();
+        homePage.login();
     }}

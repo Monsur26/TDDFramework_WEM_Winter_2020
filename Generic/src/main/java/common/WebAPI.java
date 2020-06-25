@@ -102,8 +102,8 @@ public class WebAPI {
     public static WebDriver driver = null;
     public String browserstack_username = "anikaislam2";
     public String browserstack_accesskey = "qke7i757kjsuZiEKdNB7";
-    public String saucelabs_username = "monsurahmed1";
-    public String saucelabs_accesskey = "48bd964a-506f-4ad1-a5f5-f37e060bbea5";
+    public String saucelabs_username = "anika11";
+    public String saucelabs_accesskey = "c1aaf33f-6f9c-492d-88ec-fa128e2727ab";
 
     @Parameters({"useCloudEnv", "cloudEnvName", "os", "os_version", "browserName", "browserVersion", "url"})
     @BeforeMethod
@@ -123,7 +123,7 @@ public class WebAPI {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
     }
 
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName) {
