@@ -9,7 +9,6 @@ import org.testng.Assert;
 import static webelements.HomePageWebElements.*;
 
 public class HomePage extends WebAPI {
-
     @FindBy(css = exploreProductWebElement) public WebElement exploreProduct;
     @FindBy(css = autoProductWebElement) public WebElement autoProduct;
     @FindBy(css = claimWebElement) public WebElement claimbutton;
@@ -45,7 +44,6 @@ public class HomePage extends WebAPI {
         searchItem.sendKeys(pass);
         searchItem.sendKeys(Keys.ENTER);
     }
-
 
     public void clickExploreButton() throws InterruptedException {
         exploreButton();

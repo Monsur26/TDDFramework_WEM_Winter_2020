@@ -103,7 +103,7 @@ public class HomePage extends WebAPI {
         enterKeyWord("Hand Sanitizer");
         clickSearchButton();
         clickProduct();
-        checkout();
+        clickCheckout();
     }
     public void validateCheckout(){
         String actual="Buy Now";
@@ -124,7 +124,7 @@ public class HomePage extends WebAPI {
 
     public void accountsMenuMouseHover() throws InterruptedException {
         accountsMenuHover();
-        sleepFor(2);
+        implicitWait(3);
     }
     public void validateMenuHover(){
         String actual=accountsMenu.getText();
@@ -141,7 +141,7 @@ public class HomePage extends WebAPI {
         Assert.assertEquals(actual,"","not successful");
     }
     public void languageSelect() throws InterruptedException {
-        sleepFor(5);
+        implicitWait(5);
         languageMouseHover();
         espaniolRadioButton();
     }

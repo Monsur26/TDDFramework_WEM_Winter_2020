@@ -255,6 +255,7 @@ public class WebAPI {
     public void navigateBack() {
         driver.navigate().back();
     }
+
     public void navigateTo(String url) {
         driver.navigate().to(url);
     }
@@ -262,6 +263,7 @@ public class WebAPI {
     public void navigateForward() {
         driver.navigate().forward();
     }
+
     public void navigateRefresh() {
         driver.navigate().refresh();
     }
@@ -314,7 +316,7 @@ public class WebAPI {
         String df = new SimpleDateFormat("yyyyMMddhhss").format(new Date());
 
         //create object variable of TakeScreenshot class
-        TakesScreenshot ts = (TakesScreenshot)driver;
+        TakesScreenshot ts = (TakesScreenshot) driver;
 
         //create File object variable which holds the screen shot reference
         File source = ts.getScreenshotAs(OutputType.FILE);
@@ -642,35 +644,43 @@ public class WebAPI {
         String text = webElement.getText();
         return text;
     }
-    public static void mouseHover(WebElement element){
-        Actions actions=new Actions(driver);
+
+    public static void mouseHover(WebElement element) {
+        Actions actions = new Actions(driver);
         actions.moveToElement(element).perform();
     }
-    public static void implicitWait(int sec){
-        driver.manage().timeouts().implicitlyWait(sec,TimeUnit.SECONDS);
+
+    public static void implicitWait(int sec) {
+        driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
     }
-    public static void selectDropDownByIndex(WebElement element,int value){
-        Select select=new Select(element);
+
+    public static void selectDropDownByIndex(WebElement element, int value) {
+        Select select = new Select(element);
         select.selectByIndex(value);
     }
-    public static void windowMaximize(){
+
+    public static void windowMaximize() {
         driver.manage().window().maximize();
     }
+
     public static void windowSwitch() {
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);
         }
     }
-    public static void switchToPreviousWindow(String winHandleBefore){
+
+    public static void switchToPreviousWindow(String winHandleBefore) {
         driver.switchTo().window(winHandleBefore);
     }
-    public static void scrollUpDownByHeight(){
-        JavascriptExecutor js=(JavascriptExecutor) driver;
+
+    public static void scrollUpDownByHeight() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     }
-    public static void dragAndDrop(WebElement To, WebElement from){
-        Actions actions=new Actions(driver);
-        actions.dragAndDrop(To,from).build().perform();
+
+    public static void dragAndDrop(WebElement To, WebElement from) {
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(To, from).build().perform();
     }
 
 }

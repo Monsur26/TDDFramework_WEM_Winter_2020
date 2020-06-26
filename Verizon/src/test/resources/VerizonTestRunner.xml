@@ -13,7 +13,7 @@
     <!--        <parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="83"/>
-    <parameter name="url" value="https://www.verizon.com"/>
+    <parameter name="url" value="https://www.verizon.com/?lid=//global//residential"/>
 
 
 
@@ -21,6 +21,7 @@
 
     <test name="HomePage">
         <classes>
+            <class name="hometest.HomePageTest"></class>
 
 
 

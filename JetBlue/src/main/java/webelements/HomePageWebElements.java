@@ -16,6 +16,4 @@ public class HomePageWebElements {
     public static final String flightTrackerWebElement="//jb-header-desktop//jb-my-trips-subnav-template//li[3]//jb-bubble-link[1]//a[1]//jb-image[1]//img[1]";
     public static final String checkStatusButtonWebElement="//font[contains(text(),'Check status')]";
 
-
-
 }

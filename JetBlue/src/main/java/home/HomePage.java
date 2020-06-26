@@ -1,4 +1,5 @@
 package home;
+
 import common.WebAPI;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,17 +9,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.beans.PropertyChangeListener;
 import java.util.List;
-
 import static webelements.HomePageWebElements.*;
 
-
 public class HomePage extends WebAPI{
-
     @FindBy(xpath = bookingButtonWebElement) public WebElement bookingButton;
     @FindBy(xpath = flightButtonWebElement) public WebElement flightButton;
     @FindBy(xpath = oneWayRadioButtonWebElement)public WebElement OnewayButton;
@@ -33,7 +30,6 @@ public class HomePage extends WebAPI{
     @FindBy(xpath = myTripMenuWebElement)public WebElement myTripMenu;
     @FindBy(xpath = flightTrackerWebElement)public WebElement flightTracker;
     @FindBy(xpath = checkStatusButtonWebElement)public WebElement checkStatusButton;
-
 
     public void bookingButtonClick(){ bookingButton.click(); }
     public void clickFlightButton(){flightButton.click();}
@@ -97,11 +93,7 @@ public class HomePage extends WebAPI{
     public void myTripStatus(){
         myTripMenu();
         flightTracker();
-
     }
-
-
-
     public void validateJetBlueLogo(){
         String actual=JetBlueLogo.getText();
         Assert.assertEquals(actual,"","not successful");
@@ -117,8 +109,6 @@ public class HomePage extends WebAPI{
     public void validateTravellerMenu(){
         String actual=travellerInfoMenu.getText();
         Assert.assertEquals(actual,"","not successful");
-
     }
-
 
 }

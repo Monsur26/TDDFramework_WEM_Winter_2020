@@ -9,88 +9,102 @@ import utility.ReadExcelFile;
 
 public class HomePageTest extends WebAPI {
     static HomePage homePage;
-    public static void getInitElements(){homePage= PageFactory.initElements(driver,HomePage.class); }
+
+    public static void getInitElements() {
+        homePage = PageFactory.initElements(driver, HomePage.class);
+    }
 
     @Test(priority = 1)
-    public void testCovidNotice(){
+    public void testCovidNotice() {
         getInitElements();
         homePage.covidNotice();
         homePage.validateCovidNotice();
     }
+
     @Test(priority = 2)
-    public void testSearchingItem(){
+    public void testSearchingItem() {
         getInitElements();
         homePage.searchingItem();
         homePage.validateSearchBox();
     }
+
     @Test(priority = 3)
-    public void testInsuranceButton(){
+    public void testInsuranceButton() {
         getInitElements();
         homePage.insuranceButtonSearch();
         homePage.validateInsuranceButtonSearch();
     }
+
     @Test(priority = 4)
-    public void testMedicareZip(){
+    public void testMedicareZip() {
         getInitElements();
         homePage.medicareZipSearch();
         homePage.validateMedicareZipSearch();
     }
+
     @Test(priority = 5)
-    public void testsingInfature(){
+    public void testsingInfature() {
         getInitElements();
         homePage.signingIn();
         homePage.validateSignIn();
     }
+
     @Test(priority = 6)
     public void testLanguageSelect() throws InterruptedException {
         getInitElements();
         homePage.languageSelect();
         homePage.validateLanguage();
     }
+
     @Test(priority = 7)
-    public void testUpperLinks(){
+    public void testUpperLinks() {
         getInitElements();
         homePage.getUpperMenuLinks();
         homePage.validateCovidNotice();
     }
+
     @Test(priority = 8)
-    public void testMemberSignInPage(){
+    public void testMemberSignInPage() {
         getInitElements();
         homePage.memberSignIn();
         homePage.validateMemberSignIn();
     }
+
     @Test(priority = 9)
-    public void test(){
+    public void test() {
         getInitElements();
         homePage.dragAndDropUHCLogo();
         homePage.validateCovidNotice();
     }
+
     @Test(priority = 10)
-    public void testExploreMedDragAndDrop(){
+    public void testExploreMedDragAndDrop() {
         getInitElements();
         homePage.dragExploreMedicare();
         homePage.validateExploreMedicare();
     }
+
     @Test(priority = 11)
-    public void testCompleteSigIn(){
+    public void testCompleteSigIn() {
         getInitElements();
         homePage.loggingIn();
         homePage.validateLoggingIn();
     }
+
     @Test(dataProvider = "testdata")
-    public void testloginWithExcel(String user, String pass){
+    public void testloginWithExcel(String user, String pass) {
         getInitElements();
-        homePage.loginInWithExcel(user,pass);
+        homePage.loginInWithExcel(user, pass);
         homePage.validateLoggingIn();
     }
-    @DataProvider(name="testdata")
-    public Object[][] testDataExample(){
+
+    @DataProvider(name = "testdata")
+    public Object[][] testDataExample() {
         ReadExcelFile configuration = new ReadExcelFile("Data/UHCdata.xlsx");
         int rows = configuration.getRowCount(0);
-        Object[][]signin_credentials = new Object[rows][2];
+        Object[][] signin_credentials = new Object[rows][2];
 
-        for(int i=0;i<rows;i++)
-        {
+        for (int i = 0; i < rows; i++) {
             signin_credentials[i][0] = configuration.getData(0, i, 0);
             signin_credentials[i][1] = configuration.getData(0, i, 1);
         }

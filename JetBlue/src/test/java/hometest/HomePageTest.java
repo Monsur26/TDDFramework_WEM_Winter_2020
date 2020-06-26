@@ -51,7 +51,6 @@ public class HomePageTest extends WebAPI {
     public void testFaceBookPage(){
         getInitElements();
         homePage.JetBlueFBPage();
-
     }
     @Test(priority = 8)
     public void testLanguageChange(){
@@ -75,6 +74,5 @@ public class HomePageTest extends WebAPI {
     public void testMyTripStatus(){
         getInitElements();
         homePage.myTripStatus();
-
     }
 }
