@@ -642,6 +642,9 @@ public class WebAPI {
         String text = webElement.getText();
         return text;
     }
-
+    public static void dragAndDrop(WebElement To, WebElement From){
+    Actions actions=new Actions(driver);
+    actions.dragAndDrop(To, From).build().perform();
+    }
 
 }

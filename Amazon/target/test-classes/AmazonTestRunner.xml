@@ -23,10 +23,6 @@
         <classes>
             <class name="hometest.HomePageTest"></class>
 
-
-
-
-
         </classes>
 
     </test>
