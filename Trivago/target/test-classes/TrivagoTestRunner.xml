@@ -22,7 +22,7 @@
     <test name="HomePage">
         <classes>
 
-
+            <class name="hometest.HomePageTest"></class>
 
 
 

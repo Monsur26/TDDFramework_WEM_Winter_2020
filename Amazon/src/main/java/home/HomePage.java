@@ -78,17 +78,13 @@ public class HomePage extends WebAPI {
     public void productSearch() throws InterruptedException {
         getWindowsMaximize();
         enterKeyWord("disinfectant wipes");
-        sleepFor(3);
         clickSearchButton();
-        sleepFor(3);
         cleanUp();
     }
     public void productAddedToCart() throws InterruptedException {
         getWindowsMaximize();
         enterKeyWord("hand gloves disposable");
-        sleepFor(2);
         clickSearchButton();
-        sleepFor(2);
         disposableGloves.click();
         sleepFor(3);
         clickAddToCart();
@@ -124,5 +120,10 @@ public class HomePage extends WebAPI {
 
     public void validateSearchProduct(){
 
+    }
+
+    public void searchProductFromDB(String keyword) throws Exception {
+        enterKeyWord(keyword);
+        clickSearchButton();
     }
 }

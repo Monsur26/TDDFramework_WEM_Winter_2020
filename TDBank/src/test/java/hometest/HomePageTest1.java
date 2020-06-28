@@ -16,11 +16,56 @@ public class HomePageTest1 extends WebAPI {
 
 
     @Test
-
     public void testGetTitle(){
         getInitElements();
         getTitle();
+    }
+    @Test
+    public void testProducts() throws InterruptedException {
+        getInitElements();
+        homePage.MouseHoverOnProductsToServices();
+    }
+    @Test
+    public void testFindLocation() throws InterruptedException {
+        getInitElements();
+        homePage.TryToFindLocation();
+    }
+    @Test
+    public void testLogin() throws InterruptedException {
+        getInitElements();
+        homePage.setLogin();
+
+    }
+    @Test
+
+    public void testLoginAcc() throws InterruptedException {
+        getInitElements();
+        homePage.setLoginAcc();
+
+    }
+    @Test
+    public void testProductCreditCard() throws InterruptedException {
+        getInitElements();
+        homePage.tryProductCreditCard();
+    }
+    @Test
+    public void testHomeEquity() throws InterruptedException {
+        getInitElements();
+        homePage.tryHomeEquity();
+
+    }
+    @Test
+    public void testHomeEquityPopup() throws InterruptedException {
+        getInitElements();
+        homePage.tryHomeEquityPopup();
 
     }
 
+    @Test
+
+    public void testCountryOption() throws InterruptedException {
+        getInitElements();
+        homePage.tryCountry();
+
+    }
 }

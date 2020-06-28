@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.testng.annotations.Optional;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 
@@ -29,10 +30,7 @@ import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class WebAPI {
@@ -123,7 +121,7 @@ public class WebAPI {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
     }
 
     public WebDriver getLocalDriver(@Optional("mac") String OS, String browserName) {
@@ -373,7 +371,7 @@ public class WebAPI {
         driver.findElement(By.cssSelector(locator)).sendKeys(value, Keys.ENTER);
     }
 
-    public void typeByXpath(String locator, String value) {
+    public void typeByXpath(String locator, Keys value) {
         driver.findElement(By.xpath(locator)).sendKeys(value);
     }
 
@@ -657,19 +655,52 @@ public class WebAPI {
         action.moveToElement(driver.findElement(By.cssSelector(String.valueOf(webElement)))).build().perform();
     }
     public void dropDownByCSS(String locator, String value){
-
         WebElement element=driver.findElement(By.cssSelector(locator));
         Select select=new Select(element);
         select.selectByVisibleText(value);
-
+        implicitWait(5);
     }
     public void dropDownXpath(String locator, String value) throws InterruptedException {
-
-        WebElement element=driver.findElement(By.xpath(locator));
-        Select select=new Select(element);
+        WebElement element = driver.findElement(By.xpath(locator));
+        Select select = new Select(element);
         select.selectByVisibleText(value);
         sleepFor(2);
+    }
+        public void dropDownbyXpath(WebElement element, String value) throws InterruptedException {
 
+//            WebElement element=driver.findElement(By.xpath(locator));
+            Select select=new Select(element);
+            select.selectByVisibleText(value);
+            sleepFor(2);
+    }
+    public void mouseHoverUseWebelement(WebElement element){
+        Actions action = new Actions(driver);
+        Actions hover = action.moveToElement(element);
+       hover.build().perform();
+//        WebElement element = driver.findElement(By.cssSelector(locator));
+//        Actions action = new Actions(driver);
+//        Actions hover = action.moveToElement(element);
+//        hover.build().perform();
+    }
+    public void implicitWait(int sec){
+        driver.manage().timeouts().implicitlyWait(sec,TimeUnit.SECONDS) ;
+    }
+    public void scrollDownVertically(){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("scrollBy(0,8500)");
+    }
+    public void scrollUpVertically(){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("scrollBy(0,-8000)");
+    }
+    public void getAllCookies(){ driver.manage().getCookies();}
+    public void deleteAllCookies(){ driver.manage().deleteAllCookies();}
+    public void windowHandle(){
+        Set<String> windowIds =driver.getWindowHandles();
+        Iterator<String> iter=windowIds.iterator();
+        String mainWindow=iter.next();
+        String childWindow=iter.next();
+        driver.switchTo().window(childWindow);
     }
 
 

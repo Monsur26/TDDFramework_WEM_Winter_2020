@@ -4,6 +4,8 @@ import common.WebAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
+
 import java.util.Iterator;
 import java.util.Set;
 import static webelements.HomePageWebElements.*;
@@ -19,6 +21,9 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.LINK_TEXT,using = findOnlineDoctorWebElement) public WebElement findOnlineDoctor;
     @FindBy(how = How.XPATH,using = signInWebElement) public WebElement signIn;
     @FindBy(how = How.LINK_TEXT,using = singInMyuhcWebElement) public WebElement signInMyuhc;
+    @FindBy(how = How.CSS,using = userNameWebElement) public WebElement user;
+    @FindBy(how = How.CSS,using = passwordWebElement) public WebElement password;
+    @FindBy(how = How.CSS,using = submitSignInWebElement) public WebElement submitSignIn;
     @FindBy(how = How.XPATH,using = findVProviderWebElement) public WebElement findVProvider;
 
     public void UHCHomePage(){
@@ -68,4 +73,39 @@ public class HomePage extends WebAPI {
         System.out.println("child window :"+driver.getTitle());
         findVProvider.click();
     }
+    public void userName(String userName){user.sendKeys(userName);}
+    public void password(String pass){password.sendKeys(pass);}
+    public void submit(){submitSignIn.click();}
+    public void loggingIn(){
+//        myUhcSignInButtonClick();
+        signIn.click();
+        signInMyuhc.click();
+        userName("abcd");
+        password("abcd");
+//        submitSignIn.click();
+        submit();
+    }
+    public void myUHCuserSignin(){
+        signIn.click();
+        signInMyuhc.click();
+    }
+    public void validateLoggingIn(){
+        String actual=password.getText();
+        Assert.assertEquals(actual,"","not successful");
+    }
+    public void loginInWithExcel(String user, String pass){
+        myUHCuserSignin();
+        userName(user);
+        password(pass);
+        submitSignIn.click();
+
+//        myUhcSignInButtonClick();
+
+//        username(user);
+//        password(pass);
+//        clickSubmit();
+
+    }
+
+
 }

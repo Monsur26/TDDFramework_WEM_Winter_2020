@@ -11,5 +11,8 @@ public class HomePageWebElements  {
     public static final String findOnlineDoctorWebElement="Online Doctor";
     public static final String signInWebElement="//div[@class='signin signin-menu ml-4']//div[@class='signin-menu__content-wrapper color-greyDark weight-regular']";
     public static final String singInMyuhcWebElement="Sign In to myuhc.com";
+    public static final String userNameWebElement="input[name='EMAIL']";
+    public static final String submitSignInWebElement="#submitBtn";
+    public static final String passwordWebElement="#PASSWORD";
     public static final String findVProviderWebElement="//h2[contains(text(),'Find a Vision Provider')]";
 }

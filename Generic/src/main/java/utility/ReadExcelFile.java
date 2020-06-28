@@ -1,0 +1,39 @@
+package utility;
+
+
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import java.io.File;
+import java.io.FileInputStream;
+
+public class ReadExcelFile {
+
+    XSSFWorkbook work_book;
+//    HSSFWorkbook work_book;
+    XSSFSheet sheet;
+//    HSSFSheet sheet;
+    public ReadExcelFile(String excelfilePath) {
+        try {
+            File s = new File(excelfilePath);
+            FileInputStream stream = new FileInputStream(s);
+            work_book = new XSSFWorkbook(stream);
+//            work_book = new HSSFWorkbook(stream);
+
+        }
+        catch(Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    public String getData(int sheetnumber, int row, int column){
+        sheet = work_book.getSheetAt(sheetnumber);
+        String data = sheet.getRow(row).getCell(column).getStringCellValue();
+        return data;
+    }
+    public int getRowCount(int sheetIndex) {
+        int row = work_book.getSheetAt(sheetIndex).getLastRowNum();
+        row = row + 1;
+        return row;
+    }
+}
