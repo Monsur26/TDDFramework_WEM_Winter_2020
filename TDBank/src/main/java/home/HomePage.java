@@ -21,6 +21,12 @@ public class HomePage extends WebAPI {
     @FindBy(how = How.CSS, using = setMylocationWebelement) public WebElement setMylocation;
     @FindBy(how = How.XPATH, using = countryWebelement) public WebElement country;
     @FindBy(how = How.XPATH, using = countryNameWebelement) public WebElement countryName;
+    @FindBy(how = How.XPATH, using = learningWebelement) public WebElement learning;
+    @FindBy(how = How.XPATH, using = creditNlendingWebelement) public WebElement creditNlending;
+
+    public void MHOnProducts(){
+        mouseHoverByXpath("//a[contains(text(),'Products')]");
+    }
     public void MouseHoverOnProductsToServices() throws InterruptedException {
         getWindowsMaximize();
         mouseHoverByCSS("#td-desktop-nav-dropdown-link-2");
@@ -64,5 +70,18 @@ public class HomePage extends WebAPI {
         getWindowsMaximize();
         country.click();
         countryName.click();
+    }
+    public void userName(String userName){user.sendKeys(userName);}
+    public void password(String pass){password.sendKeys(pass);}
+    public void submit(){loginsubmit.click();}
+    public void loginInWithExcel(String user, String pass){
+        loginAcc.click();
+        userName(user);
+        password(pass);
+        submit();
+    }
+    public void learningCredit(){
+        learning.click();
+        creditNlending.click();
     }
 }

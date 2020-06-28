@@ -34,14 +34,11 @@ public class HomePageTest1 extends WebAPI {
     public void testLogin() throws InterruptedException {
         getInitElements();
         homePage.setLogin();
-
     }
     @Test
-
     public void testLoginAcc() throws InterruptedException {
         getInitElements();
         homePage.setLoginAcc();
-
     }
     @Test
     public void testProductCreditCard() throws InterruptedException {
@@ -52,20 +49,26 @@ public class HomePageTest1 extends WebAPI {
     public void testHomeEquity() throws InterruptedException {
         getInitElements();
         homePage.tryHomeEquity();
-
     }
     @Test
     public void testHomeEquityPopup() throws InterruptedException {
         getInitElements();
         homePage.tryHomeEquityPopup();
-
     }
-
     @Test
-
     public void testCountryOption() throws InterruptedException {
         getInitElements();
         homePage.tryCountry();
-
     }
+    @Test
+    public void testLearingCredit() throws InterruptedException {
+        getInitElements();
+        homePage.learningCredit();
+    }
+    @Test
+    public void testMHOnProducts() throws InterruptedException {
+        getInitElements();
+        homePage.MHOnProducts();
+    }
+
 }

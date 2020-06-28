@@ -15,4 +15,6 @@ public class HomePageWebElements {
     public static final String setMylocationWebelement="button[class='td-button td-button-block td-button-secondary']";
     public static final String countryWebelement="//a[@id='td-desktop-nav-dropdown-link-0']//span[@class='td-icon expand']";
     public static final String countryNameWebelement="//ul[@class='td-dropdown-content']//a[contains(text(),'Canada')]";
+    public static final String learningWebelement="//html//body//div//div//header//div//div//div//nav//ul//li//a[contains(text(),'Learning')]";
+    public static final String creditNlendingWebelement="//*[@id=\"Tab_2\"]/div[1]";
 }
