@@ -119,6 +119,7 @@ public class WebAPI {
             }
         } else {
             getLocalDriver(os, browserName);
+
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
@@ -642,6 +643,27 @@ public class WebAPI {
         String text = webElement.getText();
         return text;
     }
+    public static void settingmyMac(String url){
+        System.setProperty("webdriver.chrome.driver","BrowserDriver/mac/chromedriver");
+        WebDriver driver=new ChromeDriver();
+        driver.get(url);
 
+
+    }
+    public void dropDownByCSS(String locator, String value){
+
+        WebElement element=driver.findElement(By.cssSelector(locator));
+        Select select=new Select(element);
+        select.selectByVisibleText(value);
+
+    }
+    public void dropDownXpath(String locator, String value) throws InterruptedException {
+
+        WebElement element=driver.findElement(By.xpath(locator));
+        Select select=new Select(element);
+        select.selectByVisibleText(value);
+        sleepFor(2);
+
+    }
 
 }

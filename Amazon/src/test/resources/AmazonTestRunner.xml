@@ -7,10 +7,10 @@
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <!--<parameter name="cloudEnvName" value="saucelab"/>-->
-    <parameter name="os" value="windows"/>
-    <!--    <parameter name="os" value="OS X"/>-->
-    <parameter name="os_version" value="10"/>
-    <!--        <parameter name="os_version" value="Sierra"/>-->
+    <!-- <parameter name="os" value="windows"/>-->
+      <parameter name="os" value="OS X"/>
+    <!-- <parameter name="os_version" value="10"/>-->
+    <parameter name="os_version" value="Catalina"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="83"/>
     <parameter name="url" value="https://www.amazon.com"/>
@@ -21,7 +21,7 @@
 
     <test name="HomePage">
         <classes>
-            <class name="hometest.HomePageTest"></class>
+            <class name="hometest.AmazonHomePageTest"></class>
 
 
 
