@@ -4,7 +4,7 @@
 
 <suite name="JetBlue Automation Script" parallel="false">
 
-    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="useCloudEnv" value="true"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <!--<parameter name="cloudEnvName" value="saucelab"/>-->
     <parameter name="os" value="windows"/>
@@ -22,15 +22,15 @@
     <test name="HomePage">
         <classes>
 
-<!--<class name="hometest.JetBlueTest1"></class>-->
-<!--<class name="hometest.JetBlueTest2"></class>-->
-<!--<class name="hometest.JetBlueTest3"></class>-->
-<!--<class name="hometest.JetBlueTest4"></class>-->
-<!--<class name="hometest.JetBlueTest5"></class>-->
-<!--<class name="hometest.JetBlueTest6"></class>-->
-<!--<class name="hometest.JetBlueTest7"></class>-->
-<!--<class name="hometest.JetBlueTest8"></class>-->
-<!--<class name="hometest.JetBlueTest9"></class>-->
+<class name="hometest.JetBlueTest1"></class>
+<class name="hometest.JetBlueTest2"></class>
+<class name="hometest.JetBlueTest3"></class>
+<class name="hometest.JetBlueTest4"></class>
+<class name="hometest.JetBlueTest5"></class>
+<class name="hometest.JetBlueTest6"></class>
+<class name="hometest.JetBlueTest7"></class>
+<class name="hometest.JetBlueTest8"></class>
+<class name="hometest.JetBlueTest9"></class>
 <class name="hometest.JetBlueTest10"></class>
 
 

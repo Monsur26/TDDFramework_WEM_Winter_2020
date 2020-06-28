@@ -4,7 +4,7 @@
 
 <suite name="Verizon Automation Script" parallel="false">
 
-    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="useCloudEnv" value="true"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <!--<parameter name="cloudEnvName" value="saucelab"/>-->
     <parameter name="os" value="windows"/>
@@ -22,15 +22,15 @@
     <test name="HomePage">
         <classes>
 
-<!--<class name="hometest.VerizonTest1"></class>-->
-<!--<class name="hometest.VerizonTest2"></class>-->
-<!--<class name="hometest.VerizonTest3"></class>-->
-<!--<class name="hometest.VerizonTest4"></class>-->
-<!--<class name="hometest.VerizonTest5"></class>-->
-<!--<class name="hometest.VerizonTest6"></class>-->
-<!--<class name="hometest.VerizonTest7"></class>-->
-<!--<class name="hometest.VerizonTest8"></class>-->
-<!--<class name="hometest.VerizonTest9"></class>-->
+<class name="hometest.VerizonTest1"></class>
+<class name="hometest.VerizonTest2"></class>
+<class name="hometest.VerizonTest3"></class>
+<class name="hometest.VerizonTest4"></class>
+<class name="hometest.VerizonTest5"></class>
+<class name="hometest.VerizonTest6"></class>
+<class name="hometest.VerizonTest7"></class>
+<class name="hometest.VerizonTest8"></class>
+<class name="hometest.VerizonTest9"></class>
 <class name="hometest.VerizonTest10"></class>
 
 

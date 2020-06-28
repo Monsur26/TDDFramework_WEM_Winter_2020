@@ -17,11 +17,11 @@ public class HomePage extends WebAPI {
     @FindBy (xpath =wirelessWebElement ) public WebElement wireless;
     @FindBy (xpath =shopWebElement ) public WebElement shop;
     @FindBy (xpath =searchWebElement ) public WebElement search;
-    @FindBy (xpath =plansWebElement ) public WebElement plans;
+    @FindBy (css =plansWebElement ) public WebElement plans;
     @FindBy (xpath =minusWebElement ) public WebElement minus;
     @FindBy (css =dealsWebElement ) public WebElement deals;
     @FindBy (xpath =teachersWebElement ) public WebElement teach;
-    @FindBy (xpath =signWebElement ) public WebElement sign;
+    @FindBy (css =signWebElement ) public WebElement sign;
     @FindBy (xpath =compassWebElement ) public WebElement com;
     @FindBy (xpath =storeWebElement ) public WebElement store;
     @FindBy (xpath =sbarWebElement ) public WebElement sbar;
@@ -47,7 +47,7 @@ public class HomePage extends WebAPI {
         minus.click();
     }
     public void teacher() throws InterruptedException {
-     mouseHoverByXpath(dealsWebElement);
+     mouseHoverByCSS(dealsWebElement);
      sleepFor(3);
      teach.click();
     }
@@ -56,8 +56,9 @@ public class HomePage extends WebAPI {
 //    my.click();
     }
     public void locate(){
-        com.click();
+        store.click();
     }
+
     public void stores(){
         store.click();
         sbar.click();
