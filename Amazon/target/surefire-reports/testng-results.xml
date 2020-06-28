@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Extent Report DirectoryC:\Users\Monsu\IdeaProjects\TDDFramework_WEM_Winter_2020\Amazon\target\surefire-reports\html]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2020-06-13T00:16:17 EDT" name="Amazon Automation Script" finished-at="2020-06-13T00:16:33 EDT" duration-ms="16605">
+    <groups>
+    </groups>
+    <test started-at="2020-06-13T00:16:17 EDT" name="HomePage" finished-at="2020-06-13T00:16:33 EDT" duration-ms="16605">
+      <class name="hometest.HomePageTest">
+        <test-method is-config="true" signature="extentSetup(org.testng.ITestContext)[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:16 EDT" name="extentSetup" finished-at="2020-06-13T00:16:17 EDT" duration-ms="252" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@30b9eadd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Extent Report DirectoryC:\Users\Monsu\IdeaProjects\TDDFramework_WEM_Winter_2020\Amazon\target\surefire-reports\html]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- extentSetup -->
+        <test-method is-config="true" signature="setUp(boolean, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:17 EDT" name="setUp" finished-at="2020-06-13T00:16:22 EDT" duration-ms="5249" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[browserstack]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[windows]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[83]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[https://www.amazon.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="startExtent(java.lang.reflect.Method)[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:22 EDT" name="startExtent" finished-at="2020-06-13T00:16:22 EDT" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void hometest.HomePageTest.testSearchProduct() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExtent -->
+        <test-method signature="testSearchProduct()[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:22 EDT" name="testSearchProduct" finished-at="2020-06-13T00:16:32 EDT" duration-ms="10579" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSearchProduct -->
+        <test-method is-config="true" signature="afterEachTestMethod(org.testng.ITestResult)[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:32 EDT" name="afterEachTestMethod" finished-at="2020-06-13T00:16:33 EDT" duration-ms="735" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testSearchProduct status=SUCCESS method=HomePageTest.testSearchProduct()[pri:0, instance:hometest.HomePageTest@2fd6b6c7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestMethod -->
+        <test-method is-config="true" signature="cleanUp()[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:33 EDT" name="cleanUp" finished-at="2020-06-13T00:16:33 EDT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+        <test-method is-config="true" signature="generateReport()[pri:0, instance:hometest.HomePageTest@2fd6b6c7]" started-at="2020-06-13T00:16:33 EDT" name="generateReport" finished-at="2020-06-13T00:16:33 EDT" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateReport -->
+      </class> <!-- hometest.HomePageTest -->
+    </test> <!-- HomePage -->
+  </suite> <!-- Amazon Automation Script -->
+</testng-results>
