@@ -49,4 +49,5 @@ public class HomePageTest extends WebAPI {
         getInitElements();
         homePage.barBottom();
     }
+
 }

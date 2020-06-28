@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import org.w3c.dom.Text;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
 
@@ -504,6 +505,7 @@ public class WebAPI {
 
     }
 
+
     //handling Alert
     public void okAlert() {
         Alert alert = driver.switchTo().alert();
@@ -642,6 +644,36 @@ public class WebAPI {
         String text = webElement.getText();
         return text;
     }
+    //Mouse Hover
+    public static void mouseHover(WebElement element){
+    Actions actions=new Actions(driver);
+    actions.moveToElement(element).build().perform();;
+    }
+    //Handling new window
+    public static void switchToNewWindow() {
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+    }
+     //DropDown
+    public static void dropDownByIndex(WebElement element, int index){
+        Select select = new Select(element);
+        select.selectByIndex(index);
+    }
+    public static void dropDownByValue(WebElement element,String value){
+        Select select = new Select(element);
+        select.selectByValue(value);
+    }
+    public static void dropDownByText(WebElement element,String text){
+        Select select = new Select(element);
+        select.selectByVisibleText(text);
+    }
+    public static void implicitWaitTime(int seconds){
+        driver.manage().timeouts().implicitlyWait(seconds,TimeUnit.SECONDS);
+    }
+
+
+
 
 
 }

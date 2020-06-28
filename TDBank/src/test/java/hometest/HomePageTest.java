@@ -9,7 +9,7 @@ public class HomePageTest extends WebAPI {
     static HomePage homePage;
     public static void getInitElements() {homePage= PageFactory.initElements(driver,HomePage.class);
     }
-    @Test
+   /* @Test
     public void testTopMenu() throws InterruptedException {
         getInitElements();
         homePage.menuTop();}
@@ -17,7 +17,11 @@ public class HomePageTest extends WebAPI {
     public void testNavigation() throws InterruptedException {
         getInitElements();
         homePage.menuNavigation();}
-    @Test
+*/    @Test
+    public void testLogInMenu() throws InterruptedException {
+        getInitElements();
+        homePage.menuLogIn();}
+  /*  @Test
     public void testButtonSearch() throws InterruptedException {
         getInitElements();
         homePage.buttonSearch();}
@@ -33,5 +37,11 @@ public class HomePageTest extends WebAPI {
     public void testMenuService() throws InterruptedException {
         getInitElements();
         homePage.serviceQuick();}
+*/
+  @Test
+    public void testWindowSwitching(){
+      getInitElements();
+      homePage.switchingToNewWindowLogin();
 
+  }
 }

@@ -130,5 +130,10 @@ public class HomePage extends WebAPI {
 
     }
 
+    public void searchProductFromDatabase(String keyword) throws Exception {
+        enterKeyWord(keyword);
+        clickSearchButton();
+    }
+
 
 }

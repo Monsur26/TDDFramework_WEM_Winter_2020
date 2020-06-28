@@ -29,16 +29,26 @@ public class HomePage extends WebAPI {
         Select select = new Select(driver.findElement(By.id(currencyButtonWebElement)));
         select.selectByValue("OMR");
     }
-    public void languageButtonSet() {languageButton.click();}
-    public void searchBarSet(String keyword) {searchBar.sendKeys(keyword);}
-    public void searchButtonSet() {searchButton.click();}
+    public void languageButtonSet() {
+        languageButton.click();
+    }
+    public void searchBarSet(String keyword) {
+        searchBar.sendKeys(keyword);
+    }
+    public void searchButtonSet() {
+        searchButton.click();
+    }
     public void bottomBarSet() {
         Select select = new Select(driver.findElement(By.xpath(bottomBarWebElement)));
         select.selectByIndex(0);
     }
     //Test Cases
-    public void buttonLog() throws InterruptedException {logButtonSet();}
-    public void buttonMenu() throws InterruptedException {menuButtonSet();}
+    public void buttonLog() throws InterruptedException {
+        logButtonSet();
+    }
+    public void buttonMenu() throws InterruptedException {
+        menuButtonSet();
+    }
     public void methodPayment() throws InterruptedException{
         menuButtonSet();
         paymentMethodSet();}
@@ -46,17 +56,18 @@ public class HomePage extends WebAPI {
         currencyButtonSet();
         sleepFor(5);
     }
-    public void buttonLanguage() throws InterruptedException {languageButtonSet();}
-    public void barSearch() throws InterruptedException {searchBarSet("Fun trip-Summer scent");}
-    public void buttonSearch() throws InterruptedException {searchButtonSet();}
+    public void buttonLanguage() throws InterruptedException {
+        languageButtonSet();
+    }
+    public void barSearch() throws InterruptedException {
+        searchBarSet("Fun trip-Summer scent");
+    }
+    public void buttonSearch() throws InterruptedException {
+        searchButtonSet();
+    }
     public void barBottom() throws InterruptedException {
         bottomBarSet();
         sleepFor(5);
     }
-
-
-
-
-
 
 }
