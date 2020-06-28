@@ -643,5 +643,34 @@ public class WebAPI {
         return text;
     }
 
+    public static void implicitWait(int sec) {
+        driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
+    }
+    public static void selectDropDownByIndex(WebElement element, int value) {
+        Select select = new Select(element);
+        select.selectByIndex(value);
+    }
+    public static void windowMaximize() {
+        driver.manage().window().maximize();
+    }
+    public static void windowSwitch() {
+        for (String winHandle : driver.getWindowHandles()) {
+            driver.switchTo().window(winHandle);
+        }
+}
+    public static void scrollUpDownByHeight() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+    }
+//    public static void mouseHover(WebElement element){
+//        Actions actions=new Actions(driver);
+
+        public static void mouseHover(WebElement element) {
+            Actions actions = new Actions(driver);
+            actions.moveToElement(element).perform();
+        }
+
+
+
 
 }
