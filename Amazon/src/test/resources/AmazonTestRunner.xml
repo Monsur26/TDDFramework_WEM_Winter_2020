@@ -18,7 +18,7 @@
     <test name="HomePage">
         <classes>
             <class name="hometest.HomePageTest"></class>
-            <class name="hometest.AccountListMouseHoverTest"></class>
+            <class name="hometest.HomePageTestDB"></class>
 
         </classes>
     </test>

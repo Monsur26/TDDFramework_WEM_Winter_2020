@@ -15,6 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -676,12 +677,9 @@ public class WebAPI {
     public void mouseHoverUseWebelement(WebElement element){
         Actions action = new Actions(driver);
         Actions hover = action.moveToElement(element);
-       hover.build().perform();
-//        WebElement element = driver.findElement(By.cssSelector(locator));
-//        Actions action = new Actions(driver);
-//        Actions hover = action.moveToElement(element);
-//        hover.build().perform();
+        hover.build().perform();
     }
+
     public void implicitWait(int sec){
         driver.manage().timeouts().implicitlyWait(sec,TimeUnit.SECONDS) ;
     }
@@ -702,7 +700,10 @@ public class WebAPI {
         String childWindow=iter.next();
         driver.switchTo().window(childWindow);
     }
-
+    public void validateTestCase(WebElement element, String expectedResult) {
+        String actualResult = element.getText();
+        Assert.assertEquals(actualResult,expectedResult,"Not successful");
+    }
 
 
 }

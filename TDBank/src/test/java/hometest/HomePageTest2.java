@@ -23,7 +23,7 @@ public class HomePageTest2 extends WebAPI {
     }
     @DataProvider(name="testdata")
     public Object[][] testDataExample(){
-        ReadExcelFile configuration = new ReadExcelFile("Data/UHCdata.xlsx");
+        ReadExcelFile configuration = new ReadExcelFile("Data/TDBankdata.xlsx");
         int rows = configuration.getRowCount(0);
         Object[][]signin_credentials = new Object[rows][2];
 

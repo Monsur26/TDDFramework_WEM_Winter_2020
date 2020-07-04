@@ -77,12 +77,10 @@ public class HomePage extends WebAPI {
     public void password(String pass){password.sendKeys(pass);}
     public void submit(){submitSignIn.click();}
     public void loggingIn(){
-//        myUhcSignInButtonClick();
         signIn.click();
         signInMyuhc.click();
         userName("abcd");
         password("abcd");
-//        submitSignIn.click();
         submit();
     }
     public void myUHCuserSignin(){
@@ -98,13 +96,6 @@ public class HomePage extends WebAPI {
         userName(user);
         password(pass);
         submitSignIn.click();
-
-//        myUhcSignInButtonClick();
-
-//        username(user);
-//        password(pass);
-//        clickSubmit();
-
     }
 
 

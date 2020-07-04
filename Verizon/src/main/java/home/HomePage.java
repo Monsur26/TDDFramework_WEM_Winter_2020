@@ -1,10 +1,7 @@
 package home;
 
 import common.WebAPI;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -36,6 +33,7 @@ public class HomePage extends WebAPI {
      @FindBy(how = How.CSS,using = passwordWebElement) public WebElement password;
      @FindBy(how = How.CSS,using = checkBoxWebElement) public WebElement checkBox;
      @FindBy(how = How.CSS,using = submitWebElement) public WebElement submit;
+     @FindBy(how = How.CSS,using = shopOnlineWebElement) public WebElement shopOnline;
 
      public void VerizonShop(){
          wireless.click();
@@ -62,8 +60,6 @@ public class HomePage extends WebAPI {
          implicitWait(5);
          shopDeal.click();
      }
-
-
     public void InHomeShopDealsTVcheckBox(){
          WebElement element=driver.findElement(By.cssSelector(""));
          if(!element.isSelected()){
@@ -121,11 +117,7 @@ public class HomePage extends WebAPI {
          inHome.click();
 //         searchBox.click();
 //         enterKeyWord("iPhone 11 Pro");
-
-
         typeOnInputBox("#scbsearchtopinpu","Phone");
-//       typeOnElementNEnter("#scbsearchtopinpu","iPhone 11 Pro");
-//        typeOnInputBox("#scbsearchtopinpu","iPhone 11 Pro");
         sleepFor(5);
     }
     public void VerizoninHomeWatchTVGuide() throws InterruptedException {
@@ -145,6 +137,14 @@ public class HomePage extends WebAPI {
          userId.sendKeys("7576687300");
          password.sendKeys("abcd1234");
          submit.click();
+    }
+    public void shopOnlinePopup(){
+         wireless.click();
+         shopOnline.click();
+      Alert alert= driver.switchTo().alert();
+      alert.getText();
+
+
     }
 
 

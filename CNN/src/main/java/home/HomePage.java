@@ -34,7 +34,6 @@ public class HomePage extends WebAPI {
     public void cnnEdition(){
         cnnEdition.click();
         editionInter.click();
-
     }
     public void cnnMenuBar() throws InterruptedException {
         menuBar.click();
@@ -60,7 +59,6 @@ public class HomePage extends WebAPI {
         cnnBusinessPers.click();
         System.out.println(getCurrentPageUrl());
         goBackToHomeWindow();
-
     }
     public void cnnSubHeaders(){
 //        List<WebElement> elements = driver.findElements(By.name("name"));
@@ -71,7 +69,6 @@ public class HomePage extends WebAPI {
             for (int i=0; i<list.size();i++){
                 System.out.println( list.get(i).getAttribute("data-section"));
             }
-
     }
     public void cnnPolitics() throws InterruptedException {
         cnnPolitics.click();

@@ -27,6 +27,7 @@ public class HomePageWebElements {
     public static final String passwordWebElement="input[placeholder='Password']";
     public static final String checkBoxWebElement="#rememberUserName";
     public static final String submitWebElement="button[type='submit']";
+    public static final String shopOnlineWebElement="#vzw-gn > div > div.promo-ribbon > div > div > span";
 
 
 
