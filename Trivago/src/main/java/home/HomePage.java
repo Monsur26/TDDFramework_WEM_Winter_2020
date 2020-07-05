@@ -2,6 +2,7 @@ package home;
 
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -16,6 +17,8 @@ public class HomePage extends WebAPI {
     @FindBy(xpath = loginDataWebElements) public WebElement loginData;
     @FindBy(xpath = menuWebElements) public WebElement menu;
     @FindBy(xpath = menuRecentlyWebElements) public WebElement menuRecently;
+    @FindBy(xpath = barcelonaWebElements) public WebElement barcelona;
+    @FindBy(className = searchButtonWebElements) public WebElement searchButton;
 
 
     public void searchBar(String Keyword){
@@ -44,18 +47,28 @@ public class HomePage extends WebAPI {
         menuRecently.click();
     }
     public void menuHover(){
-//        Actions actions= new Actions(driver);
-//        actions.moveToElement(menu).perform();
-        menu.click();
+        Actions actions=new Actions(driver);
+        actions.moveToElement(menu).perform();
+//        menu.click();
+    }
+    public void barcelona(){
+        barcelona.click();
+    }
+    public void searchButton(){
+        searchButton.click();
     }
 
     public void searchBarTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         searchBar("Alberta, Canada");
         sleepFor(2);
         cleanUp();
     }
     public void checkInInitiateTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         searchBar("Alberta, Canada");
         sleepFor(2);
@@ -64,6 +77,8 @@ public class HomePage extends WebAPI {
         cleanUp();
     }
     public void checkInDateSelectTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         searchBar("Alberta, Canada");
         sleepFor(2);
@@ -75,17 +90,23 @@ public class HomePage extends WebAPI {
     }
     public void emailTrivago() throws InterruptedException {
         sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
         email("hassaannizam1994@gmail.com");
         sleepFor(2);
         cleanUp();
     }
     public void loginTrivago() throws InterruptedException {
         sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
         login();
         sleepFor(2);
         cleanUp();
     }
     public void loginDataTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         login();
         sleepFor(2);
@@ -95,10 +116,41 @@ public class HomePage extends WebAPI {
     }
     public void menuRecentlyTrivago() throws InterruptedException {
         sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
         menuHover();
         sleepFor(2);
         menuRecently();
         sleepFor(2);
         cleanUp();
     }
+    public void barcelonaTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
+        searchBar("Barcelona");
+        sleepFor(2);
+        cleanUp();
+    }
+    public void iceLandTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
+        searchBar("Iceland");
+        sleepFor(2);
+        searchButton();
+        sleepFor(2);
+        cleanUp();
+    }
+    public void switzerLandTrivago() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
+        searchBar("Switzerland");
+        sleepFor(2);
+        searchButton();
+        sleepFor(2);
+        cleanUp();
+    }
+
 }

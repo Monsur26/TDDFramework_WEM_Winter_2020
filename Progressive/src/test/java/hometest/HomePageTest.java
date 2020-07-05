@@ -18,9 +18,9 @@ public class HomePageTest extends WebAPI {
         homePage.autoProgressive();
     }
     @Test(priority = 2)
-    public void testZipCode() throws InterruptedException {
+    public void testLogInProgressive() throws InterruptedException {
         getInitElements();
-        homePage.quoteProgressive();
+        homePage.logInProgressive();
     }
     @Test(priority = 3)
     public void testHomeProgressive() throws InterruptedException {
@@ -33,14 +33,14 @@ public class HomePageTest extends WebAPI {
         homePage.exploreProgressive();
     }
     @Test(priority = 5)
-    public void testAtvProgressive() throws InterruptedException {
+    public void testMotorCycleProgressive() throws InterruptedException {
         getInitElements();
-        homePage.atvProgressive();
+        homePage.motorCycleProgressive();
     }
     @Test(priority = 6)
-    public void testAtvZipCodeProgressive() throws InterruptedException {
+    public void testMotorCycleZipCodeProgressive() throws InterruptedException {
         getInitElements();
-        homePage.atvZipCodeProgressive();
+        homePage.motorCycleZipCodeProgressive();
     }
     @Test(priority = 7)
     public void testGetAQuoteProgressive() throws InterruptedException {
@@ -51,5 +51,15 @@ public class HomePageTest extends WebAPI {
     public void testDataProgressive() throws InterruptedException {
         getInitElements();
         homePage.dataProgressive();
+    }
+    @Test(priority = 9)
+    public void testTrailerProgressive() throws InterruptedException {
+        getInitElements();
+        homePage.trailerProgressive();
+    }
+    @Test(priority = 10)
+    public void testMoreChoices() throws InterruptedException {
+        getInitElements();
+        homePage.moreChoicesProgressive();
     }
 }

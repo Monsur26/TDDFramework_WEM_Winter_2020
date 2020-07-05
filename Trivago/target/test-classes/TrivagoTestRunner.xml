@@ -21,13 +21,7 @@
 
     <test name="HomePage">
         <classes>
-<!--        <class name="hometest.HomePageTest"></class>-->
-<!--            <class name="hometest.HomePageTest2"></class>-->
-<!--            <class name="hometest.HomePageTest3"></class>-->
-<!--            <class name="hometest.HomePageTest4"></class>-->
-<!--            <class name="hometest.HomePageTest5"></class>-->
-<!--                <class name="hometest.HomePageTest6"></class>-->
-            <class name="hometest.HomePageTest7"></class>
+        <class name="hometest.HomePageTest"></class>
 
 
 

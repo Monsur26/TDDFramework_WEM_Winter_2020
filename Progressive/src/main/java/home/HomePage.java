@@ -7,20 +7,22 @@ import org.openqa.selenium.support.How;
 import static webelements.HomePageWebElements.*;
 public class HomePage extends WebAPI {
     @FindBy(how = How.XPATH, using = autoWebElements) public WebElement auto;
-    @FindBy(xpath = zipCodeWebElements) public WebElement zipCode;
+    @FindBy(id = logInWebElements) public WebElement logIn;
     @FindBy(xpath = homeWebElements) public WebElement home;
     @FindBy(xpath = exploreWebElements) public WebElement explore;
-    @FindBy(xpath = atvWebElements) public WebElement atv;
-    @FindBy(xpath = atvZipCodeWebElements) public WebElement atvZipCode;
+    @FindBy(xpath = motorCycleWebElements) public WebElement motorCycle;
+    @FindBy(xpath = motorCycleZipCodeWebElements) public WebElement motorCycleZipCode;
     @FindBy(xpath = getAQuoteWebElements) public WebElement getAQuote;
     @FindBy(xpath = firstNameWebElements) public WebElement firstName;
     @FindBy(xpath = lastNameWebElements) public WebElement lastName;
+    @FindBy(xpath = trailerWebElements) public WebElement trailer;
+    @FindBy(xpath = moreChoicesWebElements) public WebElement moreChoices;
 
     public void auto(){
         auto.click();
     }
-    public void zipCode(String Keyword){
-        zipCode.sendKeys(Keyword);
+    public void logIn(){
+        logIn.click();
     }
     public void home(){
         home.click();
@@ -28,11 +30,11 @@ public class HomePage extends WebAPI {
     public void explore(){
         explore.click();
     }
-    public void atv(){
-        atv.click();
+    public void motorCycle(){
+        motorCycle.click();
     }
-    public void atvZipCode(String Keyword){
-        atvZipCode.sendKeys(Keyword);
+    public void motorCycleZipCode(String Keyword){
+        motorCycleZipCode.sendKeys(Keyword);
     }
     public void getAQuote(){
         getAQuote.click();
@@ -44,22 +46,32 @@ public class HomePage extends WebAPI {
     public void lastName(String Keyword){
         lastName.sendKeys(Keyword);
     }
+    public void trailer(){
+        trailer.click();
+    }
+    public void moreChoices(){
+        moreChoices.click();
+    }
 
     public void autoProgressive() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         auto();
         sleepFor(2);
         cleanUp();
     }
-    public void quoteProgressive() throws InterruptedException {
+    public void logInProgressive() throws InterruptedException {
         sleepFor(2);
-        auto();
+        driver.manage().window().maximize();
         sleepFor(2);
-        zipCode("11360");
+        logIn();
+        sleepFor(2);
+        cleanUp();
     }
     public void homeProgressive() throws InterruptedException {
         sleepFor(2);
-        auto();
+        driver.manage().window().maximize();
         sleepFor(2);
         home();
         sleepFor(2);
@@ -67,35 +79,43 @@ public class HomePage extends WebAPI {
     }
     public void exploreProgressive() throws InterruptedException {
         sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
         explore();
         sleepFor(2);
         cleanUp();
     }
-    public void atvProgressive() throws InterruptedException {
+    public void motorCycleProgressive() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         explore();
         sleepFor(2);
-        atv();
+        motorCycle();
         sleepFor(2);
         cleanUp();
     }
-    public void atvZipCodeProgressive() throws InterruptedException {
+    public void motorCycleZipCodeProgressive() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
         sleepFor(2);
         explore();
         sleepFor(2);
-        atv();
+        motorCycle();
         sleepFor(2);
-        atvZipCode("11360");
+        motorCycleZipCode("11360");
         sleepFor(2);
         cleanUp();
     }
     public void getAQuoteProgressive() throws InterruptedException {
         sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
         explore();
         sleepFor(2);
-        atv();
+        motorCycle();
         sleepFor(2);
-        atvZipCode("11360");
+        motorCycleZipCode("11360");
         sleepFor(2);
         getAQuote();
         sleepFor(2);
@@ -103,17 +123,33 @@ public class HomePage extends WebAPI {
     }
     public void dataProgressive() throws InterruptedException {
         sleepFor(2);
+        driver.manage().window().maximize();
+        sleepFor(2);
         explore();
         sleepFor(2);
-        atv();
+        motorCycle();
         sleepFor(2);
-        atvZipCode("11360");
+        motorCycleZipCode("11360");
         sleepFor(2);
         getAQuote();
         sleepFor(2);
         firstName("Hassaan");
         sleepFor(2);
         lastName("Nizam");
+        sleepFor(2);
+        cleanUp();
+    }
+    public void trailerProgressive() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
+        trailer();
+        sleepFor(2);
+        cleanUp();
+    }
+    public void moreChoicesProgressive() throws InterruptedException {
+        sleepFor(2);
+        driver.manage().window().maximize();
+        moreChoices();
         sleepFor(2);
         cleanUp();
     }

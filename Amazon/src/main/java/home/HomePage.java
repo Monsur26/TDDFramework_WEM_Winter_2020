@@ -222,6 +222,7 @@ public class HomePage extends WebAPI {
         sleepFor(2);
         driver.manage().window().maximize();
         newReleases();
+        sleepFor(2);
         theLastOfUs();
         sleepFor(2);
         cleanUp();
